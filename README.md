@@ -11,13 +11,7 @@ A tool for building a fixed scoring rubric for judging AI output in your own dom
 
 "That looks good" is not the same as "that is accurate, safe, and ready to use." Most people using AI for repeated, real-stakes output never define what a good result actually looks like before they start trusting it. A rubric fixes that, scoring the same checklist every time so a weak spot gets caught before it causes a real problem, not after.
 
-```mermaid
-flowchart TB
-    A["1. Gather good and bad examples"]
-    B["2. Build scoring areas and automatic failures"]
-    C["3. Score real outputs, revise if needed"]
-    A --> B --> C
-```
+![A small example of a five-point scoring rubric and automatic failures.](assets/diagrams/08-build-your-own-rubric.svg)
 
 ## Use It
 

@@ -37,3 +37,7 @@ MIT.
 ## Feedback
 
 Built a rubric for your own domain? [Start a discussion](https://github.com/shaunmarsden/build-your-own-rubric/discussions) if an area was missing or the process did not fit your task.
+
+## Part of a Family
+
+This is one of a family of free tools generalising [practical-ai-sales-workflows](https://github.com/shaunmarsden/practical-ai-sales-workflows) patterns beyond sales. See [sibling-projects](https://github.com/shaunmarsden/sibling-projects) for the rest, or use [the router](https://github.com/shaunmarsden/sibling-projects/blob/main/ROUTER.md) if you are not sure which one actually fits.

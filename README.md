@@ -42,10 +42,6 @@ No installation, project, or coding required to try it once.
 
 A rubric built here is a starting point, not a finished law. Test it against a handful of real outputs and check whether the scores actually match what a careful human would conclude before trusting it for anything with real stakes.
 
-## Licence
-
-MIT.
-
 ## Feedback
 
 Built a rubric for your own domain? [Start a discussion](https://github.com/shaunmarsden/build-your-own-rubric/discussions) if an area was missing or the process did not fit your task.

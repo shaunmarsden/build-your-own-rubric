@@ -66,4 +66,4 @@ Do not produce a finished rubric when:
 
 A rubric is a tool for a human to apply, not something that scores itself. Once built, it needs testing against a handful of real outputs to check whether the scores it produces actually match what a careful human would conclude, before it gets trusted for anything with real stakes.
 
-For a fictional worked example, building a rubric for AI-drafted customer support replies and then applying it once, read [the worked example](example/). Use [the blank template](templates/rubric-template.md) once you have your own scoring areas decided.
+For a fictional worked example, building a rubric for AI-drafted customer support replies and then applying it once, read [the worked example](example/). For the harder case, no real bad example yet, stopping rather than guessing, read [the second worked example](example-two/). Use [the blank template](templates/rubric-template.md) once you have your own scoring areas decided, and [the review checklist](checks/checklist.md) before trusting a finished rubric.

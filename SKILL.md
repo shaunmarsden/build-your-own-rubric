@@ -5,7 +5,7 @@ description: Build a fixed scoring rubric for judging AI output in your own doma
 
 # Build Your Own AI Output Rubric
 
-You do not need to install anything to try this once: copy this whole file, paste it as your first message in any AI chat tool, then answer the questions below about your own task.
+You do not need to install anything to try this once. The lines between the dashes at the very top are just this file's label; leave them in. On GitHub, copy this using the **Raw** button near the top of the page rather than selecting the rendered text, so the tables and links below paste in cleanly. Send the whole file as your first message in any AI chat tool, then answer the questions below about your own task.
 
 "That looks good" is not the same as "that is accurate, safe, and ready to use." A rubric is a fixed checklist scored the same way every time, so two different results can be compared fairly and a weak spot gets caught before it causes a real problem, not after. This builds one for whatever repeated task you actually do, rather than handing you a generic one that does not fit.
 

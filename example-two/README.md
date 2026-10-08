@@ -5,3 +5,5 @@ The first [example](../example/) tests whether a finished rubric catches a real 
 - [inputs.md](inputs.md): two good examples, but no real bad example, only "I'd just know it if I saw it"
 - [output.md](output.md): the response, which stops rather than guesses
 - [review.md](review.md): whether stopping was right, and whether it still offered something useful
+
+The repository doesn't record which model wrote this response, or whether it knew what the test was checking. Read it as an illustration of what a good run looks like, not as a logged run.

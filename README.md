@@ -9,20 +9,20 @@ Build a fixed scoring sheet for judging AI output in your own work, instead of j
 
 ## Why
 
-"That looks good" is not the same as "that is accurate, safe, and ready to use." Most people who use AI for the same important task again and again never decide what a good result looks like before they start trusting it. A rubric fixes that. You score the same checklist every time, so you catch a weak spot before it causes harm, not after.
+"That looks good" is not the same as "that is accurate, safe, and ready to use." Many people who use AI for the same important task again and again never decide what a good result looks like before they start trusting it. A rubric fixes that. You score the same checklist every time, so you catch a weak spot before it causes harm, not after.
 
 [![A small example of a five-point scoring rubric and automatic failures.](assets/diagrams/08-build-your-own-rubric.svg)](SKILL.md)
 
 ## Use It
 
-Copy [SKILL.md](SKILL.md) and paste it into your AI tool (ChatGPT, Claude, Gemini or similar). Then answer its questions about your task: what it is, two good examples, one bad example and what made it bad, and what a missed failure would cost. It builds:
+Copy [SKILL.md](SKILL.md) and paste it into your AI tool (ChatGPT, Claude, Gemini or similar). Then answer its questions about your task: what it is, two or three good examples, a bad example and what made it bad, and what a missed failure would cost. It builds:
 
 - Scoring areas, each one a thing that could make an output good or bad on its own, rather than one overall feeling
 - A five-point scale, defined clearly enough that two people would give the same output the same score
 - Automatic failures, the outcomes that are never acceptable, which fail an output whatever its score
 - What to record, so a correction goes into a better prompt next time, not just a number
 
-In [the worked example](example/), the tool builds a rubric for AI-drafted customer support replies. Then it scores a new reply that fails in a subtler way than the bad example the rubric came from. That checks the rubric catches more than the one case it saw. [The second worked example](example-two/) tests the opposite case. There's no real bad example yet, so the honest answer is to stop rather than guess.
+In [the worked example](example/), the tool builds a rubric for AI-drafted customer support replies. Then the rubric is applied to a new reply that fails in a subtler way than the bad example the rubric came from. That checks the rubric catches more than the one case it saw. [The second worked example](example-two/) tests a different case, an earlier one. There's no real bad example yet, so the honest answer is to stop rather than guess.
 
 Use [the blank template](templates/rubric-template.md) once you've worked out your own scoring areas. Use [the review checklist](checks/checklist.md) before you trust a finished rubric with anything important.
 

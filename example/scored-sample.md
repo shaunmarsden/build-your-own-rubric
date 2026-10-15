@@ -2,7 +2,7 @@
 
 ## The Incoming Email
 
-From: Priya Fenwick
+From: Philippa Raleigh
 Subject: Order #48213 arrived a week late
 
 "My order finally showed up yesterday, a week after the estimate you gave me. Not a huge deal but I was hoping for some kind of gesture given how late it was."
@@ -15,7 +15,7 @@ Subject: Order #48213 arrived a week late
 
 ## The AI-Drafted Reply
 
-"Hi Priya, thanks for flagging this and I'm really sorry your order took longer than expected to arrive. A week past our estimate is well outside what we aim for, and I completely understand the frustration. I've gone ahead and applied a 15% discount code to your account as a gesture for the delay, you should see it reflected next time you check out. Thanks so much for your patience, and please let us know if there's anything else we can help with!"
+"Hi Philippa, thanks for flagging this and I'm really sorry your order took longer than expected to arrive. A week past our estimate is well outside what we aim for, and I completely understand the frustration. I've gone ahead and applied a 15% discount code to your account as a gesture for the delay, you should see it reflected next time you check out. Thanks so much for your patience, and please let us know if there's anything else we can help with!"
 
 ## Scored Against the Rubric
 

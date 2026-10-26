@@ -1,0 +1,62 @@
+Your answers are enough to build this. The task has real stakes, you gave me a concrete bad example, and you described what a miss costs. So here is the finished rubric. Your Tuesday 10am draft is the clearest lesson in it, and it drives the first automatic failure.
+
+# Applicant First-Reply Draft Rubric
+
+Built from your own gathered inputs: the task (an AI tool drafts first replies to job applicants, for a recruiter to review and send), two good examples, one bad example, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Commitments and dates | Every date, time, slot, next step and promise in the draft is one that has actually been agreed or booked. Nothing is offered that the team has not decided. A draft that says the dates are not yet known and will be confirmed scores well here (your second good example). | / 5 |
+| Timeline accuracy | Any stated timeline matches the real one (for example "within two weeks"). No invented deadlines and no softer or faster promise than the team can keep. | / 5 |
+| Facts about the role and process | Role title, stage, location, pay and process steps match the actual job and the applicant's own application. Nothing is made up or guessed. | / 5 |
+| Missing information | The draft says plainly what is not yet known (dates, decision, next stage) rather than filling the gap with a guess. | / 5 |
+| Status and decision | The draft does not suggest the applicant has been shortlisted, rejected, or offered anything unless that decision has been made. It does not hint at a decision still to come. | / 5 |
+| Ready for approval, not already done | The draft reads as a message for the recruiter to check and send. It does not treat an action as done (an invitation sent, a slot held, a decision made) when it has not been. | / 5 |
+| Tone and register | Polite, clear and warm enough for a first reply, and the same for every applicant. No false urgency, no pressure, no over-friendly or cold wording. | / 5 |
+| Sensitive or irrelevant information | Nothing about other candidates, internal views of the applicant, the hiring manager's thinking, salary bands, or personal characteristics unrelated to the role. | / 5 |
+
+Eight areas, under the limit of ten.
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Offers or names a specific interview date, time or slot that has not been agreed and booked. This is the Tuesday 10am failure: the applicant turned down another offer because of it.
+- States or implies that the applicant has been invited, shortlisted, rejected or offered a job when the hiring manager has not decided.
+- Makes a commitment on the company's behalf that nobody has given (a promised outcome, a promised reply date, a promised feedback call).
+- Invents urgency or authority, for example "please confirm by tomorrow" or "the hiring manager has approved".
+- Includes information that is confidential or about another person (another applicant's details, internal comments on the applicant).
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+## How to use this, and two cautions
+
+1. The automatic failures are the ones that actually hurt you. Check them first, before you add up any score. A draft can score high on tone and still fail on one invented date.
+2. The first failure only works if the recruiter can tell what has been agreed. The tool cannot know that by itself. A sensible process change, which I would try first: give the AI only a short line of confirmed facts for each applicant (for example "interview dates: not yet set; timeline: two weeks") and tell it to use only those. Then anything it says beyond that line is easy to spot.
+
+## Test it before you trust it
+
+This rubric is a tool for a person to apply. It does not score itself. Before you rely on it for anything that matters, take five to ten real drafts from the tool, including the Tuesday 10am one if you still have it, and score them with the rubric. Then compare each result with what a careful recruiter would have said about the same draft.
+
+- The Tuesday draft should come out as an automatic failure. If it does not, the rubric is wrong and needs fixing first.
+- If two people score the same draft differently by more than a point, the wording of that area is too loose. Tighten it.
+- If an area never scores below 4, or one you care about is missing, change the rubric. It is a starting point, not a fixed law.
+
+If you send me a few real drafts and tell me how a recruiter would judge them, I can check whether the rubric agrees and suggest changes.

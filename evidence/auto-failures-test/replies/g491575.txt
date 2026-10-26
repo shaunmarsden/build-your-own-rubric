@@ -1,0 +1,52 @@
+Thanks, that is enough to build a grounded rubric. The task has real stakes (a legal penalty of several times the deposit), and you have given me a concrete bad example, so I can go ahead.
+
+```markdown
+# Tenancy Agreement Summary Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Accuracy of key terms | Rent, due date, deposit amount, term length and notice periods match the agreement exactly. Check each against the document, not against the summary's wording. | / 5 |
+| Conditions and caveats kept | Conditions survived, for example "increases only with two months' written notice" and not just "rent can increase". | / 5 |
+| Stated versus absent | Anything the agreement does not say is reported as missing, not filled in. Example: "The agreement does not name a deposit scheme. Check this before signing." | / 5 |
+| Deposit handling | The summary states what the agreement says about the deposit: amount, who holds it, which scheme (if named), and any time limit mentioned. It does not describe protection as in place unless the agreement says so. | / 5 |
+| Missing information flagged | The summary lists what the landlord should check or ask about before signing, rather than leaving gaps unmentioned. | / 5 |
+| Quoting and sourcing | Key terms are quoted or point to a clause, so the landlord can find them in the agreement. | / 5 |
+| Plain language for the reader | Written for a small landlord, not a lawyer. Clear enough to act on without hiding the exact terms. | / 5 |
+| Check, not clearance | The summary helps the landlord check the key terms. It does not say the agreement is fine, legal or safe to sign. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- States that the deposit is protected, or held in an approved scheme, when the agreement names no scheme (the failure in your bad example)
+- States any other term as present or confirmed when the agreement does not contain it, for example a scheme name, a deposit amount, a time limit or a notice period (the same mistake in a nearby field)
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+```
+
+Notes on how I built it:
+
+- The two automatic failures come only from your bad example and the same mistake in a nearby field. I did not add others. For instance, I did not make "forgets to mention the missing scheme" an automatic failure, because nobody has described that happening on its own; it sits in the scored areas "Stated versus absent" and "Missing information flagged" instead. If a different outcome has actually happened to you or someone you know, tell me and I can add it.
+- Eight scored areas, under the limit of ten. If nobody ever scores one low, drop it.
+- I wrote "Check, not clearance" because your tool is there to help the landlord check terms. If your tool is meant to say more than that, change this line.
+
+Before you trust it for anything real, run it over a handful of real summaries, including the one that went wrong, and check that the scores match what a careful person would conclude. The bad summary should hit an automatic failure. If it does not, the rubric is not catching your actual problem and needs fixing first.

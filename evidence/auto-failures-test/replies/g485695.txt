@@ -1,0 +1,52 @@
+# Applicant First-Reply Drafts Rubric
+
+Built from your own gathered inputs: the task (an AI tool drafts first replies to job applicants for a recruiter to review and send), two good examples, one bad example (the Tuesday 10am invitation), and what a missed failure costs (a misled applicant, a possible complaint, a poor name among candidates).
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Commitments and invitations | The draft does not offer an interview, a date, a time, a call or any other next step that has not been agreed and booked. Anything it promises is something the recruiter can confirm is real. | / 5 |
+| Timeline accuracy | Any timeline matches our real one (the team will be in touch within two weeks). The draft does not make up a shorter or longer one. | / 5 |
+| Confirmed facts versus unknowns | The draft says plainly what is not yet known, as in "I do not have the interview dates yet and will confirm them", and does not fill the gap with a guess. | / 5 |
+| Missing information | The draft correctly notices what it lacks (dates, decision, role details) and leaves a clear note for the recruiter, rather than hiding the gap in confident wording. | / 5 |
+| Prepared, not done | The draft reads as a message for the recruiter to approve. It does not treat a decision, booking or approval as already made. | / 5 |
+| Invented authority | The draft does not speak for the hiring manager, announce a decision, or imply the applicant is shortlisted, preferred or likely to succeed when nobody has said so. | / 5 |
+| Tone and register | The tone suits a first reply to an applicant: polite, clear, honest. It is not over-warm, not cold, and not pushy. | / 5 |
+| Sensitive or irrelevant information | The draft leaves out internal notes, comments on other candidates, pay details not yet shared, and anything about the applicant that should not be raised at this stage. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Invites the applicant to a specific date, time or slot that has not been agreed and booked (the Tuesday 10am draft is the case that cost us).
+- States or implies that the applicant has been selected, shortlisted, offered the role, or told the outcome, when the hiring manager has not decided.
+- Gives a timeline or a promised next step that is not our real one.
+- Contains another candidate's details or the team's private assessment.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+## Notes on using this
+
+I kept it to eight areas so it gets filled in. "Missing information" and "Confirmed facts versus unknowns" sit close together. If you find you always score them the same, merge them. If nobody ever scores an area low after a month of use, drop it.
+
+The automatic failures are separate from the scores. A draft can score well on tone and still fail because of one sentence. Your Tuesday draft would have failed on the first line, and it would have scored 1 on commitments and invitations.
+
+Before you trust this for real use, take five to ten past drafts, including the Tuesday one and your two good ones, and score them. Check that the scores match what a careful recruiter would say. If a draft the recruiter calls fine scores badly, or a draft they would never send scores well, change the area wording and try again.
+
+A last point from the bad example. The recruiter sent the draft anyway, so the rubric alone would not have stopped it. It catches the problem only if someone scores the draft before it goes out. Scoring the "Commitments and invitations" area, even on its own, is the quickest check to put in front of the recruiter.

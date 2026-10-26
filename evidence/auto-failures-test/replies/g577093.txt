@@ -1,0 +1,53 @@
+Thanks, that is enough to build this from. The task has real stakes (the 1,418 payment cost you a supplier hold), and you gave a concrete bad example, so I can ground the rubric in what actually happened rather than guess.
+
+Here is the rubric.
+
+# Supplier Invoice Entry Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Total matches the invoice | Compare the entered total with the printed total digit by digit, including decimal places and thousands separators. Look at the original, not just the AI's summary. | / 5 |
+| Supplier, invoice number and due date match | Each is entered exactly as printed (for example "Invoice 7731, Calder Print, due 14 November"). Check that the date was not reformatted into a different day or month. | / 5 |
+| Unclear values flagged, not guessed | Where a scan is cut off, blurry or ambiguous, the AI says so and asks for a check of the original (as in your good example 2) instead of filling in a plausible number. | / 5 |
+| Missing information identified | Anything absent from the invoice is named as missing, for example no purchase order number (your good example 1), rather than left blank without comment or filled in. | / 5 |
+| Confirmed versus inferred | Values read directly off the invoice are kept apart from anything the AI worked out or assumed. If it chose between two figures on the page, or inferred a date format, it says so. | / 5 |
+| Prepared for approval, not treated as done | The entry is presented as waiting for finance to approve. It does not say or imply the invoice is approved, checked or ready to pay. | / 5 |
+| Nothing invented | No made-up authority, urgency or commitment, such as "payment must go today" or "approved by the supplier", unless it is printed on the invoice. | / 5 |
+
+Seven areas, under the limit of ten. Add more only if real use shows a gap.
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Enters a total that differs from the printed total (a dropped, added or shifted digit, as with 14,180 entered as 1,418) without flagging that it is unsure.
+- Enters the supplier, invoice number or due date differently from what is printed, without flagging it. This is the same kind of mistake as the 14,180 / 1,418 error, in a nearby field.
+
+I kept this list to what your bad example showed, plus the same mistake in the other fields the tool enters. I have not added failures nobody has described. If something else has ever gone wrong, or you think it could, tell me what happened and we can decide whether it belongs here. Otherwise it is safer to cover it in a scored area above.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+A few notes on using it:
+
+- The first row is the one that would have caught your 1,418 mistake. The key is that whoever scores it checks the entered total against the original invoice, not against what the AI said. In your bad example nobody noticed, so the checking step needs to be a real comparison.
+- Test it before you trust it. Take a handful of real past outputs, including the 14,180 one and one or two you know were fine, and score them. If the rubric does not fail the 1,418 entry and pass the good ones, the wording needs changing. It is a tool for a person to apply, not something that scores itself.
+- Revise it after real use. If an area is never scored low, or you keep finding a problem it does not cover, change it.

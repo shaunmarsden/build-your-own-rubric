@@ -1,0 +1,55 @@
+Your answers are enough to build this. The task has real stakes (a penalty of several times the deposit), and you gave a concrete bad example, so the rubric below is built from it and not guessed.
+
+# Tenancy Agreement Summary Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Key terms accurate | Rent, payment day, deposit amount, start date, length of term and notice periods all match the agreement exactly. Check each figure against the page. | / 5 |
+| Deposit protection | The summary says which scheme the agreement names. If the agreement names none, the summary says so plainly and tells the landlord to check before signing. It never says "protected" unless the agreement says so. | / 5 |
+| Conditions kept | Conditions and limits survive. "Increases only with two months' written notice" must not shrink to "rent can increase". | / 5 |
+| Fact versus assumption | What the agreement says is kept apart from what the tool infers. Anything inferred is labelled as such. | / 5 |
+| Missing information | The summary lists what the agreement leaves out (for example no scheme named, no break clause, no repair duties) and does not fill the gap with a guess. | / 5 |
+| Traceable | Each key term quotes the agreement or points to its clause, so the landlord can check it in under a minute. | / 5 |
+| No invented authority | The summary does not say "safe to sign", "compliant" or "standard", and does not give legal advice. It leaves the decision with the landlord. | / 5 |
+| Sensitive and irrelevant detail | Tenant personal details (bank, ID, contact numbers) and clauses that do not matter to the check stay out. | / 5 |
+| Plain language | A landlord who is not a lawyer can read it once and act on it. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- States that a deposit is protected, or names a scheme, when the agreement names none. This is your bad example, and it led to the missed deadline and the penalty.
+- States any legally significant term as fact when the agreement does not contain it.
+- Gets a money figure or a date wrong (rent, deposit, start date, notice period).
+- Tells the landlord the agreement is safe to sign or legally compliant.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+## Before you trust it
+
+Two notes on how I built this.
+
+First, I kept to nine areas, and the automatic failures are the outcomes that cause real harm. They are not a harsher second score. The first failure is the one that matters most: for each summary, check what the agreement says about the deposit scheme before you read what the summary says.
+
+Second, a rubric that scores itself is not a check. Before you rely on this, run it on five or so real summaries, including your bad one and your two good ones. Score them yourself first, then see whether the rubric gives the same verdict. If your bad example does not fail on the first automatic failure, or a good one fails, fix the rubric before you use it. Revise it later if an area never scores below 4, or if a mistake turns up that none of the areas catch.
+
+One thing I did not put in: the exact legal time limit for protecting a deposit. It depends on your country and tenancy type, so check it against the official source and, if you want it on the sheet, add it yourself.

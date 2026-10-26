@@ -1,0 +1,50 @@
+Thanks, that is enough to build a grounded rubric. The 14,180 entered as 1,418 is a clear bad example, and the two good examples show what you want instead: copy exactly, flag what is missing, and say so when a figure is unreadable.
+
+Here is the rubric.
+
+# Supplier Invoice Entry Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Total | The entered total matches the printed total digit for digit, including the decimal point and every zero. Check it against the original, not against the AI's own summary. | / 5 |
+| Invoice number | The invoice number is copied exactly as printed, with no dropped, added or swapped characters. | / 5 |
+| Supplier | The supplier name matches the invoice and the name on your accounts system record, not a similar-looking supplier. | / 5 |
+| Due date | The due date is exactly as printed, with the right day, month and year. If only payment terms are shown, the output says so rather than working out a date without telling you. | / 5 |
+| Unclear or unreadable values | Anything cut off, blurry or ambiguous (like your page 2 example) is flagged for a person to check against the original, not guessed. | / 5 |
+| Missing information | Fields or references that are absent are named, such as the missing purchase order number in your first example. | / 5 |
+| Confirmed versus inferred | The output makes clear which values were read directly from the invoice and which were worked out or assumed. | / 5 |
+| Left for approval | The entry is prepared for finance to approve. It is not described as approved, paid or final. | / 5 |
+
+Eight areas, under the ten maximum.
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Enters a total that differs from the printed total, such as a dropped, added or changed digit (14,180 entered as 1,418), without flagging it.
+- Makes the same kind of misreading in a nearby field, such as a wrong invoice number, due date or supplier, without flagging it.
+
+I have kept this list to the failure you actually had and the same mistake in the fields next to it. I have not added anything nobody has described. If you have seen another outcome that was serious enough to belong here, tell me what happened and I will add it. Otherwise things like a missing PO number or a guessed unclear value are covered in the scored areas above.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+A note before you rely on this. It is a starting point, not a finished tool. Run it against a handful of real invoices first, including a few with large figures, a cut-off scan and a missing PO number, and check that the scores match what a careful person in finance would conclude. Because your costly mistake was a single dropped digit, it is worth including at least one invoice where the total has a thousands separator or a large amount, so you can see whether the Total check catches it. Revise the rubric once real use shows an area is missing, or one that nobody ever scores low.

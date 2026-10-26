@@ -1,0 +1,7 @@
+My task: an AI tool suggests a name for each round of our weekly team quiz.
+
+Good examples: "Name That Tune, Nearly" and "Capital Ideas".
+
+Bad example: I do not have one. Nothing has gone wrong.
+
+What a missed failure costs: nothing, as far as I can tell.

@@ -1,0 +1,126 @@
+---
+name: build-your-own-rubric
+description: Build a fixed scoring rubric for judging AI output in your own domain, instead of judging each result by gut feel. Use when you rely on AI for repeated output that has real stakes if it goes wrong (for example code review comments, legal drafting, customer support replies, marketing copy or hiring screens) and you want a consistent way to check it. Do not use this to actually score a specific output; once a rubric exists, apply it directly instead.
+---
+
+# Build Your Own AI Output Rubric
+
+You do not need to install anything to try this once. The lines between the dashes at the very top are just this file's label; leave them in. On GitHub, copy this using the **Raw** button near the top of the page rather than selecting the rendered text, so the tables and links below paste in cleanly. Send the whole file as your first message in any AI chat tool, then answer the questions below about your own task.
+
+"That looks good" is not the same as "that is accurate, safe, and ready to use." A rubric is a fixed checklist scored the same way every time, so two different results can be compared fairly and a weak spot gets caught before it causes a real problem, not after. This builds one for whatever repeated task you actually do, rather than handing you a generic one that does not fit.
+
+## Gather the Inputs
+
+- The task the AI is doing repeatedly, in your own words
+- Two or three examples of a genuinely good output, if you have them
+- At least one example of a bad output, and what specifically made it bad
+- What a missed failure would actually cost if nobody caught it before it went out
+
+If good and bad examples are not available yet, describe in words what each would look like instead.
+
+## Build the Rubric
+
+### 1. Identify the Scoring Areas
+
+From the inputs, pull out the areas that would each independently make an output good or bad, not one overall gut feeling. Areas commonly worth checking, adapt rather than copy wholesale:
+
+- Factual accuracy against whatever source material exists
+- Whether important nuance, conditions or caveats survived into the output
+- Whether the output separates confirmed facts from estimates and assumptions
+- Whether the output correctly identifies what information is missing
+- Whether the tone or register actually fits the audience
+- Whether sensitive or irrelevant information stayed out
+- Whether an action got prepared for approval rather than treated as already done
+- Whether the output invents authority, urgency or a commitment nobody actually gave it
+
+Keep the list to ten areas or fewer. A rubric nobody fills in is worse than a shorter one that gets used.
+
+### 2. Set the Scoring Scale
+
+Use a small, consistent scale, five points works well: unsafe or unusable, weak, useful with careful review, strong with minor corrections, accurate and ready to use. Write one line for each point so two different people would score the same output the same way.
+
+### 3. Name the Automatic Failures
+
+Separately from the scored areas, list what fails an output regardless of its score, the genuinely unacceptable outcomes, not just weak ones. Drawing from the bad example gathered above helps here: what specifically made it unacceptable, not merely mediocre?
+
+### 4. State What to Record
+
+For every scored output: the total score, any automatic failure, the single most important correction a human made, and what would need to change in the prompt or process before the next attempt.
+
+## Apply the Guardrails
+
+- Never let the rubric grow so detailed that nobody actually fills it in
+- The automatic-failure list is for genuinely unacceptable outcomes, not a second, harsher scoring area
+- Build the rubric from actual examples wherever possible, rather than guessing in the abstract what might go wrong
+- A finished rubric is a starting point, not a fixed law; revise it once real use shows an area is missing or one nobody ever scores low
+
+## Stop When the Task Is Unsafe
+
+Do not produce a finished rubric when:
+
+- The task described has no real stakes if it goes wrong, in which case a rubric is unnecessary overhead
+- The person cannot describe what a bad output looks like in their domain at all, meaning any rubric produced would be guessed rather than grounded
+- The request is to build a rubric that guarantees a specific score for a specific output, rather than one built to judge outputs honestly
+
+## Require Human Review
+
+A rubric is a tool for a human to apply, not something that scores itself. Once built, it needs testing against a handful of real outputs to check whether the scores it produces actually match what a careful human would conclude, before it gets trusted for anything with real stakes.
+
+## Output Format
+
+Write the finished rubric in this shape. Replace the bracketed parts with the person's own task and areas. Keep the section names and the table columns.
+
+```markdown
+# [Your Task] Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| [Area 1] | [What specifically to check for this area] | / 5 |
+| [Area 2] | | / 5 |
+| [Area 3] | | / 5 |
+
+Keep this to ten areas or fewer.
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- [The genuinely unacceptable outcome your bad example showed]
+- [Another automatic failure, if one exists]
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+```
+
+
+---
+
+(The names and figures below are made up.)
+
+Here are my answers to your questions.
+
+My task: an AI tool suggests a name for each round of our weekly team quiz.
+
+Good examples: "Name That Tune, Nearly" and "Capital Ideas".
+
+Bad example: I do not have one. Nothing has gone wrong.
+
+What a missed failure costs: nothing, as far as I can tell.

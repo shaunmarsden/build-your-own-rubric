@@ -1,0 +1,54 @@
+Thanks, that is enough to build this. You have real stakes, a concrete bad example with a clear cost, and good examples to anchor it. Here is the rubric.
+
+```markdown
+# Applicant Reply Drafts Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Facts match our real process | Every date, timeline and step stated in the draft matches what we actually do (for example "in touch within two weeks" matches our real timeline) | / 5 |
+| Nothing stated that has not been agreed | Interview slots, dates, times, next steps and outcomes are only mentioned if they have been agreed and booked | / 5 |
+| Confirmed versus pending | The draft clearly separates what is settled from what is still to be decided or confirmed | / 5 |
+| Missing information named | Where we do not yet have a detail (such as interview dates), the draft says so and says we will confirm, as in your second good example | / 5 |
+| No invented authority or commitment | The draft does not speak for the hiring manager, promise an outcome, or imply a decision that has not been made | / 5 |
+| Action prepared, not treated as done | Anything that needs the recruiter or hiring manager to act is left for them to approve, not written as if it has already happened | / 5 |
+| Tone fits an applicant | Polite, clear and appropriately warm for someone waiting on a decision, without false urgency or false encouragement | / 5 |
+| Sensitive or irrelevant information left out | No details about other candidates, internal discussion, or reasons the applicant has not been told | / 5 |
+
+Total: / 40
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Offers or confirms an interview, or a specific date or time for one, when none has been agreed and booked
+- States any other specific detail as settled when it is not, in a nearby field of the same kind (for example an offer, a salary, a start date, an interviewer, or a hiring decision)
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+```
+
+A few notes on how I built it.
+
+- Both automatic failures come from your bad example. The first is the exact mistake. The second is the same mistake in a nearby field (an offer, salary, start date, interviewer or decision stated as settled). I have not added any others, because nobody has described them to me.
+- Other things that worry you, such as a draft that reveals information about other candidates or uses language that could look unfair, are in the scored areas for now. If one of them has actually happened, tell me and I will turn it into an automatic failure.
+- The "Nothing stated that has not been agreed" and "No invented authority" areas will overlap with the first automatic failure. That is deliberate. The automatic failure catches the severe case, and the scored areas catch the milder ones, such as a draft that hints at a likely interview without naming a day.
+
+Before you trust it, test it. Take a handful of real drafts, including some you know were fine and the Tuesday 10am one, and score them. Check that the Tuesday draft fails and the two good examples score high. If the scores do not match what a careful recruiter would conclude, adjust the areas. After some real use, revise it: drop any area nobody ever scores low, and add one if a new kind of problem keeps appearing.

@@ -1,0 +1,50 @@
+Thanks, that is enough to build this. Your task has real stakes, and your bad example shows exactly what went wrong, so I can ground the rubric in it. Here it is.
+
+# Applicant First-Reply Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Facts match our real process | Any timeline, stage or role detail is true. For example, "in touch within two weeks" matches our actual timeline. | / 5 |
+| Nothing treated as agreed that is not | The draft does not say or hint that a step, date, slot or decision exists when it has not been agreed or booked. | / 5 |
+| Says what is not yet known | Where we lack information (for example interview dates), the draft says so and promises to confirm. It does not fill the gap with a guess. | / 5 |
+| No invented authority or urgency | The draft does not say the hiring manager has decided, does not claim approval nobody gave, and does not set a deadline for the applicant that we did not choose. | / 5 |
+| Ready for the recruiter to approve | Anything the recruiter must fill in or check is clearly marked. The draft reads as a draft for review, not as something already sent or done. | / 5 |
+| Answers the applicant | The applicant's name, the role and any question they asked are handled correctly. | / 5 |
+| Tone fits the applicant | Polite, clear and plain, without false warmth or over-promising. | / 5 |
+| Sensitive or irrelevant information stays out | No other candidates, internal notes, or details about the applicant that the reply has no need to mention. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Offers or confirms an interview, or states a date, time or slot, that has not been agreed and booked.
+- Makes the same kind of unconfirmed claim in a nearby field, such as an offer, salary, start date, interview location or format, or an application outcome (shortlisted, progressed, rejected) that the hiring manager has not decided.
+
+I kept this list to what your bad example shows, plus the same mistake in nearby fields. I did not add others, such as a reply that mentions another candidate or an applicant's protected characteristic. Those are covered by the "Sensitive or irrelevant information" row, so a bad one will score 1 there. If either has actually happened to you, tell me and I will consider moving it to this list.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+## Before you rely on it
+
+This rubric is for a person to fill in. Do not trust it yet. Take five to ten real drafts, including at least one you know was bad, and score them. Then check whether the scores match what a careful recruiter would conclude. If a row never scores low, or something that worried you is not on the sheet, change the rubric.
+
+One cheap fix for the prompt side: tell the drafting tool it has no access to the calendar or the hiring manager's decisions, so it must never state a date or an outcome.

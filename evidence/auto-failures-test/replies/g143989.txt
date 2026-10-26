@@ -1,0 +1,10 @@
+I'm not going to build a rubric for this one, because your answers say it isn't needed.
+
+Two things in the instructions I'm working from rule it out:
+
+- The task has no real stakes. You said a bad quiz-round name costs nothing, and that nothing has gone wrong. A rubric is only worth the effort when a missed failure would hurt. Here it would be overhead.
+- You have no bad example. A rubric built without one would be guesswork. It would also need automatic failures, and I'd have to invent them, because you haven't described a single one.
+
+What I'd do instead: keep picking names the way you do now. Your two good examples, "Name That Tune, Nearly" and "Capital Ideas", already show the style you like: a pun, or a short phrase that fits the round's theme. If you want the tool to produce more like them, paste those two into the prompt and say "suggest five more in this style".
+
+Come back if that changes. If a name ever causes a problem (it gives away an answer, it offends someone, or it repeats an earlier round), tell me what happened and I can build a rubric from that case.

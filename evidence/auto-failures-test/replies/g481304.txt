@@ -1,0 +1,59 @@
+Your task has real stakes and your bad example is specific, so I can build this from what you gave me. Here is the rubric.
+
+# Applicant First-Reply Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Commitments and next steps | Every next step the draft states (interview, call, assessment, offer) has actually been agreed. Nothing is promised that the recruiter or hiring manager has not decided. | / 5 |
+| Dates, times and slots | Any date, time or location in the draft matches a booked slot. If none is booked, the draft says so instead of proposing one. | / 5 |
+| Timeline accuracy | Any timeframe given matches our real one (for example "within two weeks"). The draft does not invent a faster or firmer timeline. | / 5 |
+| Missing information | Where the draft does not know something (interview dates, outcome, role status), it says that plainly and says it will confirm, as in your second good example. | / 5 |
+| Confirmed versus assumed | The draft separates what is settled from what is hoped or likely. It does not hint that the applicant is shortlisted, likely to progress or close to an offer unless that is true. | / 5 |
+| Factual accuracy | The applicant's name, the role title, the application details and the company details are correct and match the source records. | / 5 |
+| Sensitive or irrelevant information | Nothing internal gets in: other candidates, the hiring manager's views, salary bands not yet shared, notes from the screen. | / 5 |
+| Tone and register | Polite, clear and warm without overselling. It reads like a recruiter wrote it and suits an applicant who may be waiting on other offers. | / 5 |
+| Draft for approval, not action taken | The draft reads as something a recruiter will review, and does not state that something has already been done or arranged. | / 5 |
+
+Nine areas, so it stays within the ten-area limit.
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Invites the applicant to an interview, or states or implies any next step, that has not actually been agreed (your Tuesday 10am draft is the example).
+- Gives a specific date, time or slot that is not booked.
+- Implies a hiring decision, shortlist position or offer that the hiring manager has not made.
+- Gives a timeline that is not our real one, in a way the applicant could plan around.
+- Includes confidential information about other candidates or internal deliberations.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+## Notes on how I built it
+
+- Your bad example drove the top of the list. The Tuesday 10am draft failed on three things at once: an unagreed commitment, an unbooked slot and a stated decision. I split these into separate areas so a draft can lose points on each one, and I put the worst version of each in the automatic failures.
+- Your two good examples became the standard for "timeline accuracy" and "missing information". A 5 in those areas looks like those two replies.
+- The recruiter in your example did review the draft and still sent it. So run this rubric as an explicit step before sending, not as a glance. A quick check for the first three areas (commitments, dates, timeline) would have caught that draft. If time is short, do those three first.
+- The automatic-failure list is short on purpose. Only your one real failure is certain. The others are the nearest neighbours of it. If real use shows another outcome that is genuinely unacceptable, add it. If an area never scores below 4 in practice, drop or merge it.
+
+## Before you trust it
+
+Test it on a handful of real drafts, including the Tuesday 10am one and your two good ones. Check that it fails the bad draft and passes the good ones, and that a careful recruiter would agree with the scores it produces. Revise anything that does not match before you rely on it for live applicants.

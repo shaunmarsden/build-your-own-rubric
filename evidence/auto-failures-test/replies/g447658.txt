@@ -1,0 +1,16 @@
+I'm not going to build a rubric for this one, and I think that's the right call for you.
+
+Two of the stop conditions in the instructions apply:
+
+1. The task has no real stakes. You said a missed failure costs nothing as far as you can tell. A fixed scoring rubric is only worth the effort when a bad output could cause a problem. A quiz round name that turns out a bit flat costs you a shrug, and you'd spot it as soon as you read it.
+2. You have no bad example. A rubric built without one would be guesswork about what might go wrong, not a check based on something that did go wrong. Your two good examples ("Name That Tune, Nearly" and "Capital Ideas") are nice, but they only tell me what you like. They don't tell me what to catch.
+
+So the honest answer is that you don't need one. Keep picking the names you like.
+
+If that changes, come back and I'll build it then. A few things would do it:
+
+- A name that clashed with something, for example it was offensive to someone on the team, gave away an answer, or repeated a name you'd already used.
+- The quiz stopped being just for your team, say it went out to customers or was run under a company brand, so a bad name would be seen by people outside the room.
+- Someone else started choosing names and you wanted them to pick the same way you do.
+
+Once you have one real bad name and can say what was wrong with it, send me that along with your good examples and I'll turn it into a short rubric.

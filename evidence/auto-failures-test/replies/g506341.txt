@@ -1,0 +1,47 @@
+Your answers are enough to build this. The task has real stakes, and your bad example is specific: a wrong total that nobody caught. That example shapes the rubric. A single wrong digit on the total can hide inside a good average score, so a wrong total is an automatic failure, not just a low mark.
+
+# Supplier Invoice Entry Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Total | The entered total matches the invoice digit for digit. Check the decimal point, the thousands separator and the currency. Compare the size of the number as well as the digits (14,180 is not 1,418). | / 5 |
+| Supplier | The supplier name matches the invoice, not a similar name already in the system. | / 5 |
+| Invoice number | The number is copied exactly as printed, with no dropped or swapped characters. | / 5 |
+| Due date | The day, month and year match the invoice. A date like 03/11 is read the way the invoice means it. If no due date is printed, the field is flagged, not filled in from payment terms. | / 5 |
+| Unclear fields | Where a scan is cut off, blurred or ambiguous, the tool says so and asks for a check of the original. It does not guess (as in your second good example). | / 5 |
+| Missing information | The tool flags what is absent, such as no purchase order number, no due date or a missing page (as in your first good example). | / 5 |
+| Consistency | Where the invoice allows it, the tool checks that line items, tax and total agree, and flags the invoice if they do not. | / 5 |
+| Nothing invented | Every entered value is on the invoice. A field with no source is left blank and flagged. | / 5 |
+| Prepared, not done | The entry is clearly marked as waiting for finance approval. It is not presented as approved, paid or final. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Enters a total that differs from the invoice in any digit, decimal place or currency, including by a factor of ten (your 14,180 entered as 1,418).
+- Fills in a field it could not read, with a guess that is not flagged as a guess.
+- Enters a value for a field that does not appear on the invoice (for example a made-up purchase order number or due date).
+- Presents an entry as approved, paid or ready to pay when a person in finance has not approved it.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+Before you trust it, run it by hand on a handful of real invoices, including the one that went wrong. Check two things. First, does the rubric fail the 1,418 entry? Second, do the scores match what a careful person in finance would conclude? If the checker ever gives a good score to an entry that a person would reject, add or tighten an area. If an area never scores below 5 after a month, drop it. Keep the list short enough that someone actually fills it in.

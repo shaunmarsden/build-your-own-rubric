@@ -1,0 +1,61 @@
+Thanks, that was enough to build this from. Your bad example is clear and specific (14,180 entered as 1,418), and your two good examples show what you want the tool to do when it is unsure. Here is the rubric.
+
+# Supplier Invoice Entry Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Total | The total matches the invoice digit for digit, including the position of any comma or decimal point. Check it against the original, not against what looks plausible. | / 5 |
+| Supplier, invoice number and due date | Each is copied exactly as printed. Nothing is reworded, reformatted into a different date, or shortened. | / 5 |
+| Unclear or unreadable values | If a value is cut off, blurred or ambiguous, the tool says so and asks for the original (as in your page 2 example). It does not guess. | / 5 |
+| Missing information | The tool notices what the invoice does not show, such as a missing purchase order number, and says so rather than leaving a field quietly empty. | / 5 |
+| Confirmed versus inferred | Anything the tool worked out or assumed (rather than read directly off the invoice) is labelled as such. | / 5 |
+| Left for approval | The entry is presented as ready for someone in finance to approve. It is not treated as approved, or as something to pay. | / 5 |
+
+Six areas, which is well inside the ten-area limit. Keep it that short so it actually gets filled in.
+
+Scoring guide for the first three areas (the ones most tied to your bad example):
+
+- 1: wrong, or guessed and presented as certain
+- 2: right in substance but needs real rework
+- 3: right, but you had to check carefully to be sure
+- 4: right with a small fix, such as formatting
+- 5: matches the original exactly, or correctly flags that it cannot
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Enters a total that differs from the invoice, for example a dropped digit, an extra digit, or a moved comma or decimal point, as in 14,180 entered as 1,418
+- Makes the same kind of mistake in a nearby field: an invoice number or a due date that differs from what is printed (for example a dropped digit, or day and month swapped)
+
+I kept this list to what your example actually showed, plus the same mistake in the fields next to the total. I did not add things like "pays an invoice without approval" or "enters the wrong supplier", because you have not described them happening. If either has actually happened, tell me and we can add it. Otherwise, a wrong supplier would just pull the supplier-field score down in the second row.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+## Before you rely on it
+
+A rubric is a tool for a person to apply. It does not score itself, and it should not be trusted yet.
+
+1. Run it on a handful of real invoices the tool has already processed, including at least one where you know the answer. The 14,180 invoice is an ideal test case: the rubric should fail it on the total.
+2. Check that the scores it gives match what a careful person in finance would conclude. If they disagree, the rubric needs changing, not the person.
+3. One practical point from your own story: this only catches the error if the person scoring compares the entry against the original invoice. A reviewer who looks only at the entered figures will not see that 1,418 should be 14,180. So the "Total" check has to be done against the original document every time.
+4. Revise it after real use. If an area is never scored low, or you find a failure it misses, change it.

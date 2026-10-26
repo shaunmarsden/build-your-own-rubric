@@ -1,0 +1,49 @@
+Thanks, that is enough to build this from. The task has real stakes and you gave me a concrete bad example, so here is the rubric.
+
+# Applicant First-Reply Draft Rubric
+
+Built from your own gathered inputs: the task (AI drafts first replies to job applicants for a recruiter to review and send), two good examples, one bad example, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Confirmed vs. unconfirmed | Every date, time, next step and outcome in the draft is something that has actually been agreed or booked. Anything not yet decided is not stated as settled. | / 5 |
+| Missing information named | Where the draft cannot give a detail (for example interview dates), it says so plainly and says it will confirm, as in your second good example. | / 5 |
+| Timeline accuracy | Any timeline quoted matches your real one (the team will be in touch within two weeks), not a guess or a faster promise. | / 5 |
+| Prepared for approval | The draft reads as something a recruiter will check and send. It does not talk as if the invitation, decision or booking has already happened. | / 5 |
+| No invented authority or commitment | The draft does not speak for the hiring manager, or promise anything, that nobody has actually given. | / 5 |
+| Fit of tone | Warm, clear and appropriate for an applicant, without false urgency or pressure to act or hold dates. | / 5 |
+| Applicant details correct | Name, role applied for and anything else taken from the application is right. | / 5 |
+| Sensitive or irrelevant information left out | Nothing internal, such as screening notes, other candidates or the hiring manager's views, appears in the reply. | / 5 |
+
+Eight areas, within the limit of ten.
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Offers or states an interview date, time or slot that has not been agreed and booked (your Tuesday 10am example).
+- Presents any other unagreed hiring detail as settled, such as an interview format, location or interviewer, a shortlisting or progression decision, an offer, a salary or a start date. This is the same mistake as the bad example in a nearby field.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt (for example, an instruction that the draft may only state dates and decisions the recruiter has supplied)
+
+## Notes
+
+- I kept the automatic failures to what your bad example showed and what follows directly from it. I did not add others, such as discriminatory wording or revealing another candidate's details. Those are covered by the scored areas above. If either has actually happened to you, tell me and we can decide whether it belongs on the automatic-failure list.
+- Before you trust this for real use, score a handful of real drafts with it, including some you already know were good or bad, and check that the scores match what a careful recruiter would conclude. Revise any area that nobody ever scores low, or any problem you find that the rubric misses.

@@ -1,0 +1,50 @@
+Your answers are enough to build this. The task has real stakes, you gave a concrete bad example, and you want a rubric that judges honestly. Here it is.
+
+# Tenancy Agreement Summary Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Accuracy against the agreement | Every term in the summary (rent, due date, deposit, notice) matches what the agreement says. Check each one against the text. | / 5 |
+| Conditions kept | Conditions survived. "Increases only with two months' written notice" must not shrink to "rent can increase". | / 5 |
+| Missing terms flagged | Where the agreement is silent (like the deposit scheme in your second good example), the summary says so and says to check before signing. | / 5 |
+| Fact versus assumption | The summary separates what the agreement states from what the tool assumes or infers. Nothing assumed is written as fact. | / 5 |
+| No invented protection | The summary does not say a term, scheme or safeguard exists unless the agreement names it. | / 5 |
+| Ready for the landlord to check | Each key term can be checked quickly, ideally by quoting the agreement's own words. The summary leaves the signing decision to the landlord. | / 5 |
+
+Six areas, well under the limit of ten.
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- States that the deposit is protected, or protected in a named or approved scheme, when the agreement names no scheme. This is your bad example.
+- States any other deposit-protection detail as fact (a scheme name, a protection date or a deadline) when the agreement does not give it. This is the same mistake in a nearby field.
+
+I kept this list to what you described. I have not added anything that nobody has told me about. If you think another outcome should be an automatic failure, tell me whether it has ever happened. If it has, we add it. If it has not, it goes into a scored area above.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+## Before you trust it
+
+A person has to apply this rubric. It does not score itself. Run it on a handful of real summaries first, including at least one you already know is wrong. Check that the scores match what a careful reader would conclude. If a summary you know is bad scores well, fix the rubric before you rely on it.
+
+Also, I do not know which country's rules apply to you or what your legal time limit for protecting a deposit is. I left that out on purpose. If you give me the agreement text and the rule you work to, I can make the "Missing terms flagged" area more specific.

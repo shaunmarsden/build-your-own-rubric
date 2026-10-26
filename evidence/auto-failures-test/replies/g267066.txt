@@ -1,0 +1,57 @@
+Nothing in your answers triggers a stop condition. A bad invoice total has a real cost and you described exactly what a bad output looks like, so here is the rubric.
+
+```markdown
+# Invoice Entry Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Total | The entered total matches the invoice digit for digit. Check the decimal point, the thousands separator and the number of digits. Where the invoice shows a subtotal and tax, check that they add up to the total entered. | / 5 |
+| Invoice number | The number matches the invoice exactly, including letters, dashes and leading zeros. | / 5 |
+| Supplier | The supplier named is the one that issued the invoice, not a parent company, a customer name or a similar-looking supplier already in the system. | / 5 |
+| Due date | The date is the one printed on the invoice, read the right way round (14/11 is not 11/14). If the invoice gives terms (such as "30 days") and no date, the output says it worked the date out and shows how. | / 5 |
+| Unclear fields | Where a scan is cut off, blurred or ambiguous, the output says so and asks for a check of the original. It does not guess. | / 5 |
+| Missing information | The output notes what the invoice does not show, such as a purchase order number, a due date or a currency. | / 5 |
+| Printed versus assumed | Anything not printed on the invoice (currency, due date from terms, which total is meant if there are several) is marked as an assumption. | / 5 |
+| Left for approval | The entry is prepared for finance to approve. It is not marked approved, scheduled or paid, and it does not claim anyone has checked it. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Enters a total, invoice number or due date that differs from the invoice without flagging the difference (the 14,180 entered as 1,418 case)
+- Fills in an unreadable or missing figure with a guess and presents it as fact
+- Enters the wrong supplier, so a payment would go to the wrong party
+- Marks an entry as approved, paid or ready to pay without a person in finance having approved it
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+```
+
+Some notes on how I built it:
+
+- **Why a wrong total is an automatic failure.** If it were only a low score, an output with a wrong total but a perfect supplier, number and date would still average well. Your 1,418 payment is exactly that case.
+- **Why the total check includes the subtotal and tax.** A total that doesn't equal subtotal plus tax is a quick way to catch a dropped digit.
+- **Your good examples.** They became the "Missing information" and "Unclear fields" areas.
+- **My guesses.** The wrong-supplier failure and the "printed versus assumed" area come from my reading of your task, not from your examples. Drop either if it doesn't match how your invoices go wrong.
+
+Before you trust it, score ten to fifteen real invoices with it, including the 14,180 one and a couple of ugly scans. Check that the scores match what a careful person in finance would conclude. If one area never scores below 5, or an area is missing, revise it then.
+
+One process point. The 1,418 slipped through because nobody noticed it. Check whether the person approving sees only the entered figures or the original invoice next to them. A rubric catches what the AI gets wrong, but only if someone compares the entry against the original.

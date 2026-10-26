@@ -1,0 +1,12 @@
+I'm not going to build a rubric for this one, and the reason comes from your own answers.
+
+The instructions say to stop when the task has no real stakes if it goes wrong, and when you can't describe what a bad output looks like. Both apply here. You said a missed failure costs nothing, and you have no bad example because nothing has gone wrong. A rubric built on that would be guessed, not grounded, and scoring a quiz-round name on five-point scales across several areas would be more work than the names are worth.
+
+"Name That Tune, Nearly" and "Capital Ideas" already work. If a name is poor, you will see it as soon as you read it.
+
+Two things would change my answer:
+
+- If a name ever does cause trouble, for example one that offended someone, gave away an answer or clashed with another round, tell me what happened. That gives us a real bad example, and I can build a short rubric from it.
+- If you want a light check now, you don't need a rubric. Ask the tool for five names and pick the one you like best. If you want a guard against repeats, keep a list of past round names and tell the tool not to reuse them.
+
+If the quiz is part of something with higher stakes, such as a client event or a competition with prizes, say so and we can look again.

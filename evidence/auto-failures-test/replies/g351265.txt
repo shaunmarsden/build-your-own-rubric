@@ -1,0 +1,49 @@
+Thanks, that is enough to build this. Your bad example is clear and the cost is real (a penalty of several times the deposit), so a rubric is worth having here.
+
+```markdown
+# Tenancy Agreement Summary Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Accuracy of key terms | Rent, due date, deposit amount, term length and notice periods match the agreement exactly. Check each figure against the text. | / 5 |
+| Conditions kept | Conditions survived into the summary. For example, "increases only with two months' written notice", not just "rent can increase". | / 5 |
+| Confirmed versus assumed | Every statement is either in the agreement or marked as an assumption. The summary does not fill a gap with what a normal agreement would say. | / 5 |
+| Missing terms flagged | Where the agreement is silent (deposit scheme, for example), the summary says so plainly and tells the landlord to check before signing. | / 5 |
+| Deposit handling | The deposit amount, the scheme (if named) and any deadline in the agreement are stated as the agreement states them, or flagged as absent. | / 5 |
+| Plain wording and relevance | The landlord can read it in a few minutes. Key terms come first, and nothing irrelevant or personal is included. | / 5 |
+| Decision left with the landlord | The summary prepares the landlord to check the agreement. It does not tell them it is safe to sign. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- States that the deposit is protected, or names a deposit scheme, when the agreement names none (the failure in your bad example)
+- States any other term as present or confirmed when the agreement does not contain it, such as the deposit amount, a notice period or the conditions on a rent increase (the same mistake in a nearby field)
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+```
+
+Some notes on what I did and did not do.
+
+- Both automatic failures come from your bad example. The first is the exact mistake. The second is the same mistake in a neighbouring field. I did not add others, such as a wrong rent figure or a missed deadline. Those sit in the scored areas. If a wrong rent figure or a missed deadline has ever actually caused a problem, tell me and I will consider moving it up.
+- "Decision left with the landlord" came from the general list (an action prepared rather than treated as done). Drop it if it does not fit how your tool is used.
+- Before you trust this, run it on a handful of real summaries, including ones you already know are good or bad, and check the scores match what you would conclude yourself. A person applies the rubric. It does not score itself. Revise it once real use shows an area is missing or one nobody ever scores low.

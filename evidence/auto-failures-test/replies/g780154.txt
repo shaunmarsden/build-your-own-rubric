@@ -1,0 +1,54 @@
+Your answers are enough to build this. The task has real stakes (the 1,418 payment cost you a supplier hold and a rushed second payment), and you gave a specific bad example, so the rubric below is based on what actually went wrong rather than a guess.
+
+# Supplier Invoice Entry Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Total amount | Compare the entered total with the invoice, digit by digit, including the decimal point and thousands separators. Check that it matches the printed total, not a subtotal, a VAT line or a line item. A 14,180 entered as 1,418 scores 1. | / 5 |
+| Supplier | The supplier is the one named on the invoice, spelled as printed, and not a parent company, a trading name from elsewhere on the page or a similar existing supplier record. | / 5 |
+| Invoice number | The number is exactly as printed, with no dropped zeros or letters and no confusion with a PO, order or account number. | / 5 |
+| Due date | The date is the one printed as the due date, not the invoice date. Check day and month order. If only payment terms are given (for example "30 days"), the output says so and does not silently work out a date as if it were printed. | / 5 |
+| Unclear or missing fields | Where a field is cut off, blurred or absent, the output says so and asks for the original. It does not guess or fill in a plausible value. | / 5 |
+| Flags on things that look off | The output notes what finance would want to know, such as no purchase order number, a total that does not match the line items and tax, an odd currency or a duplicate invoice number. | / 5 |
+| Confirmed versus inferred | Anything not read directly off the page (a converted date, an assumed currency, a total calculated from lines) is labelled as inferred. | / 5 |
+| Left for approval | The entry is presented as ready for finance to approve. It is not described as approved, paid or scheduled for payment. | / 5 |
+
+Eight areas, under the limit of ten. If you find nobody ever scores one of them low after a month of use, drop it.
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Enters a total that differs from the printed total (a dropped, added or transposed digit, a misplaced decimal point, or the wrong figure from the page), whether or not the error is flagged afterwards in a note.
+- Fills in a field it could not read clearly instead of saying it could not read it.
+- Presents the entry as approved, paid or scheduled for payment before a person in finance has approved it.
+- Enters the invoice against the wrong supplier.
+
+The first one comes directly from your 14,180 / 1,418 case. A wrong total is exactly the failure that cost you money. It should never be rescued by a good score elsewhere. The other three are listed because each one removes the human check the process depends on, not because they are merely weak.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+## Before you rely on it
+
+This rubric has not been tested. Take five to ten invoices you have already processed, including one or two difficult ones (a poor scan, a total that is not at the bottom of the page, an invoice with no PO number) and score the tool's output on each. Then check whether the scores match what a careful person in finance would conclude. In particular, include the 14,180 invoice, or one like it, and confirm that it fails. If it does not, the total-amount wording needs tightening before you trust the rubric with real payments.
+
+One practical point from your own bad example: the error went through because nobody compared the entered figure with the page. The rubric helps you judge the tool, but the person approving each entry still needs to look at the original invoice for the total. The rubric does not replace that check.

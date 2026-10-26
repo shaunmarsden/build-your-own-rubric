@@ -1,6 +1,6 @@
 ---
 name: build-your-own-rubric
-description: Build a fixed scoring rubric for judging AI output in your own domain, instead of judging each result by gut feel. Use when you rely on AI for repeated output that has real stakes if it goes wrong, code review comments, legal drafting, customer support replies, marketing copy, hiring screens, and you want a consistent way to check it. Do not use this to actually score a specific output; once a rubric exists, apply it directly instead.
+description: Build a fixed scoring rubric for judging AI output in your own domain, instead of judging each result by gut feel. Use when you rely on AI for repeated output that has real stakes if it goes wrong (for example code review comments, legal drafting, customer support replies, marketing copy or hiring screens) and you want a consistent way to check it. Do not use this to actually score a specific output; once a rubric exists, apply it directly instead.
 ---
 
 # Build Your Own AI Output Rubric
@@ -33,11 +33,11 @@ From the inputs, pull out the areas that would each independently make an output
 - Whether an action got prepared for approval rather than treated as already done
 - Whether the output invents authority, urgency or a commitment nobody actually gave it
 
-Keep the list to ten areas or fewer. A rubric nobody actually fills in in practice is worse than a shorter one that gets used.
+Keep the list to ten areas or fewer. A rubric nobody fills in is worse than a shorter one that gets used.
 
 ### 2. Set the Scoring Scale
 
-Use a small, consistent scale, five points works well: unusable, weak, useful with review, strong with minor fixes, ready to use. Write one line for each point so two different people would score the same output the same way.
+Use a small, consistent scale, five points works well: unsafe or unusable, weak, useful with careful review, strong with minor corrections, accurate and ready to use. Write one line for each point so two different people would score the same output the same way.
 
 ### 3. Name the Automatic Failures
 

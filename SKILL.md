@@ -41,7 +41,7 @@ Use a small, consistent scale, five points works well: unsafe or unusable, weak,
 
 ### 3. Name the Automatic Failures
 
-Separately from the scored areas, list what fails an output regardless of its score, the genuinely unacceptable outcomes, not just weak ones. Drawing from the bad example gathered above helps here: what specifically made it unacceptable, not merely mediocre?
+Separately from the scored areas, list what fails an output regardless of its score, the genuinely unacceptable outcomes, not just weak ones. Take each automatic failure from the bad example, or from a failure that follows directly from it, such as the same mistake in a nearby field. Do not add a failure that nobody has described. If you think another outcome might deserve to be an automatic failure, put it in a scored area, or ask the person whether it has ever happened.
 
 ### 4. State What to Record
 

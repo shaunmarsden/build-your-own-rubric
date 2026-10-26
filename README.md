@@ -22,25 +22,15 @@ Copy [SKILL.md](SKILL.md) and paste it into your AI tool (ChatGPT, Claude, Gemin
 - Automatic failures, the outcomes that are never acceptable, which fail an output whatever its score
 - What to record, so a correction goes into a better prompt next time, not just a number
 
-In [the worked example](example/), the tool builds a rubric for AI-drafted customer support replies. Then the rubric is applied to a new reply that fails in a subtler way than the bad example the rubric came from. That checks the rubric catches more than the one case it saw. [The second worked example](example-two/) tests a different case, an earlier one. There's no real bad example yet, so the honest answer is to stop rather than guess.
+[The worked example](example/) shows a rubric for AI-drafted customer support replies, then applies it to a new reply that fails in a subtler way than the bad example the rubric came from. That checks the rubric catches more than the one case it saw. [The second worked example](example-two/) is a different case: there is no real bad example yet, so the honest answer is to stop rather than guess. Both are illustrations of what a good run looks like, not logged runs.
 
 Use [the blank template](templates/rubric-template.md) once you've worked out your own scoring areas. Use [the review checklist](checks/checklist.md) before you trust a finished rubric with anything important.
-
-<details>
-<summary><strong>See exactly what it produces</strong></summary>
-
-1. A scoring sheet: your own areas, each with what to check, scored 1 to 5
-2. A one-line meaning for every point on the scale, so two people would give the same output the same score
-3. A list of automatic failures, the outcomes that are never acceptable, kept apart from the scored areas
-4. A "what to record" section, so a correction goes into a better prompt next time
-
-</details>
 
 You don't need to install anything or write any code to try it once.
 
 ## Before You Use It
 
-A rubric built here is a first draft. Before you trust it with anything important, score a handful of real outputs with it. Check the scores match what a careful person would conclude.
+A rubric built here is a first draft. Before you trust it with anything important, score a handful of real outputs with it. Check the scores match what a careful person would conclude. This repository records no logged run of the skill on a real task.
 
 ## Feedback
 

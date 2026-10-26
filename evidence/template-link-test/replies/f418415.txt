@@ -1,0 +1,60 @@
+Your answers are enough to build this. The cost is real (about 30,000 and a lost renegotiation), and your bad example shows exactly what went wrong. Here is the rubric.
+
+```markdown
+# Supplier Contract Clause Summary Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+Check every area against the contract text itself, with the clause open next to the summary.
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Renewal and termination terms | Does the summary say whether the contract renews, for how long, and what we must do to stop it? "No automatic renewal" is only right if the clause says so. | / 5 |
+| Exact figures and periods | Notice periods, fees, caps, durations and dates match the clause word for word. They are quoted, not paraphrased or rounded. | / 5 |
+| Conditions and caveats | Every "unless", "provided that" and "subject to" in the clause is still in the summary. A rule with its condition removed counts as wrong. | / 5 |
+| Notice deadline | If a notice window exists, the summary says by what date we must act, or says plainly that the date cannot be worked out from the text. | / 5 |
+| Liability and cover limits | Caps, exclusions and indemnities are stated as the clause states them, with the clause number given. | / 5 |
+| Facts versus reading | The summary separates what the clause says from what the tool infers. Inferences are labelled as inferences. | / 5 |
+| Missing information | If the contract is silent on something procurement needs, or the tool could not find a clause, the summary says so. It never writes "none" or "no" for a clause it did not find. | / 5 |
+| Clause references | Each point names the clause it came from, so a reader can check it in under a minute. | / 5 |
+| Handing off to legal | Questions that need a legal reading are flagged for legal, not settled by the summary. | / 5 |
+| Fit for the reader | A busy procurement reader can see the dates and the risks in the first few lines. No filler, no invented urgency or advice. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- States the opposite of a clause, for example "no automatic renewal" where the clause renews the contract unless we give notice
+- Gets a notice period, renewal length, fee or liability cap wrong
+- Leaves out an automatic renewal, a notice window or a termination penalty that the contract contains
+- Describes a clause that is not in the contract, or quotes wording that is not in it
+- Says a clause does not exist when the tool had not actually found one
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+```
+
+Some notes on how I built it and how to use it.
+
+- Your bad example gave me the first three automatic failures. The last two are the nearest neighbours of that failure: an invented clause, and "none" written for something the tool never found. If you think they are too strict, say so and I will move them into the scored areas. Keep the list short, though.
+- The notice deadline is its own area on purpose. In your bad example the summary was wrong, and so nobody had the date in front of them. A summary that gives the clause but not the last day to act still leaves the same gap.
+- I kept it to ten areas. If nobody fills in ten rows before a signing, cut it to the first five or six. Those cover the failure you actually had.
+- Score with the contract open. A summary can read well and still be wrong, which is exactly what happened to you.
+
+Before you trust it, test it on a handful of past summaries. Start with the bad one: it should hit an automatic failure. Your two good examples should score 4 or 5. If the rubric scores any of them differently from what a careful person would conclude, fix the rubric. After a few real signings, drop any area nobody ever scores low and add one for anything the rubric missed.

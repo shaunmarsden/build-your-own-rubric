@@ -1,0 +1,53 @@
+This task has real stakes, and your bad example is specific, so I can build a grounded rubric. The payroll ticket is the model for everything below. The rubric should catch that ticket.
+
+One caution first. I have one bad example, so some areas and automatic failures below are my guesses about what else could go wrong. I have marked them. Check each against what you know about your own helpdesk and cut any that do not fit.
+
+## Rubric: AI ticket priority (P1 to P4)
+
+You score each ticket the AI prioritised. You score the priority and the reason together, not the priority alone.
+
+### Scored areas (1 to 5 each)
+
+1. **Deadline caught.** Did the AI notice a time limit in the ticket ("pay run is at noon") and raise the priority because of it? This is the area the payroll ticket failed.
+2. **Impact caught.** Did it weigh how many people, and which business function, are affected? Finance, payroll and whole teams count for more than one person's desk.
+3. **Meaning over wording.** Did it judge what the problem stops from happening, rather than how serious the words sound? "Will not open" sounds minor. "Pay run" is not.
+4. **Facts kept apart from guesses.** Does the reason say what the ticket states, and mark anything the AI is assuming?
+5. **Missing information flagged.** If the ticket leaves out something that changes the priority (the deadline, how many people, whether there is a workaround), does the AI say so, rather than rating it confidently anyway? (My guess at a useful area.)
+6. **Reason is short and checkable.** One line a human can read in seconds and confirm or dispute against the ticket.
+7. **No invented urgency, and no invented calm.** It does not add a deadline the ticket never gave. It does not say "no impact" when the ticket says nothing. (My guess.)
+
+Seven areas is enough. Do not add more until real use shows a gap.
+
+### The scale
+
+- **1, unusable:** Wrong priority, and the reason misreads or ignores the ticket.
+- **2, weak:** Priority is wrong or barely defensible. Key detail missed, or the reason is vague.
+- **3, useful with review:** Priority is plausible but a human must check the reason before trusting it.
+- **4, strong with minor fixes:** Priority is right. The reason is sound but misses a small point or a flag.
+- **5, ready to use:** Priority is right, the reason is accurate and short, and any gaps in the ticket are flagged.
+
+### Automatic failures
+
+Any one of these fails the output whatever the score. Keep this list short. It is for outcomes you could not accept, not for weak ones.
+
+- A ticket that names a deadline within the working day, and involves pay, payments or customer money, is rated below P2. (This is your payroll case, written as a rule.)
+- A ticket mentioning a suspected security breach, lost device with data, or phishing click is rated below P2. (My guess. Confirm or drop it.)
+- A ticket affecting a whole team or department is rated P4. (My guess.)
+- The reason states a fact that is not in the ticket.
+
+Set the P2 line to match your own P1 to P4 definitions. If you send me those, I can make the rules exact.
+
+### What to record for each ticket
+
+- Total score (add the seven areas, out of 35)
+- Any automatic failure
+- The one correction a human made (for example, "raised P3 to P1 because of the noon deadline")
+- What to change in the prompt or process before the next run (for example, "tell the AI to look for time limits and treat pay as urgent")
+
+## Before you trust it
+
+A rubric does not score itself. Run it by hand on 15 to 20 real past tickets, and make sure the payroll ticket is one of them. It must come out as an automatic failure. If it does not, the rubric is wrong. Then check the other scores against what a careful colleague would have concluded. If you and the rubric disagree on several tickets, fix the rubric.
+
+Use mixed tickets: some obvious P1s, some obvious P4s, and a few that look small but are not. That last group is where the AI will go wrong, and where your bad example came from. Tell me what the test shows, and I will help you adjust the areas.
+
+Two things would make this stronger. First, two or three more real bad cases, such as tickets the AI under-rated or over-rated. Second, your actual P1 to P4 definitions.

@@ -1,0 +1,71 @@
+Thanks. Your task has real stakes and your bad example is specific, so here is a finished rubric. It is built from your three examples, and I say below where I had to guess.
+
+# Rubric: AI priority calls on helpdesk tickets
+
+You score each ticket the AI prioritises, not the tool as a whole. One ticket in, one score out.
+
+## What the bad example tells us
+
+The payroll ticket was marked P3 even though it said "pay run is at noon". The ticket gave a deadline and a group of people who would be hurt. The AI ignored both. The mouse ticket shows the opposite: low impact, no deadline, P4. So the rubric has to check two things above all: how many people are affected, and whether a clock is running.
+
+## Scoring areas (score each 1 to 5)
+
+1. **Deadline and time pressure.** Did the AI notice any stated or implied deadline ("by noon", "before the audit", "pay run", "month-end") and let it raise the priority? This is the area your bad example failed.
+2. **Reach.** Did it weigh how many people are affected, and who? One desk PC and a whole finance team are different tickets.
+3. **Business function at risk.** Did it recognise work that cannot stop: payroll, payments, customer-facing systems, anything tied to a commitment you have made to someone outside the company?
+4. **Reading what the ticket says, not how it sounds.** Calm wording with a hard deadline must still score high. Angry wording about a minor fault must not.
+5. **No invented urgency.** Did it avoid raising a priority on facts the ticket does not contain? Over-triage matters less than under-triage, but a queue full of false P1s hides the real ones.
+6. **Missing information flagged.** If the ticket was too vague to rank (no deadline, unclear who is affected), did the AI say what is missing and ask, rather than guessing a priority with confidence?
+7. **Reason given and checkable.** Is there a one-line reason that names the facts it used, so a human can check the call in a few seconds?
+8. **Escalation prepared, not done.** For P1 and P2, did it prepare the alert or hand-off for a person to approve, rather than treat it as already sent?
+9. **Sensitive detail kept out.** Does the reason line leave out personal or confidential details from the ticket (salary figures, names of people in a disciplinary matter) that the next reader does not need?
+
+Nine areas. If nobody fills it in, it is worthless, so if that feels long, drop 9 first and fold 7 into 6.
+
+## Scale (same for every area)
+
+| Score | Meaning |
+|---|---|
+| 1 Unusable | Missed it or got it backwards. A person acting on this would be misled. |
+| 2 Weak | Touched on it but got it mostly wrong or left it out. |
+| 3 Useful with review | Right in outline. A human has to fix something before it is safe to act on. |
+| 4 Strong, minor fixes | Right. Small wording or detail changes only. |
+| 5 Ready to use | Right, clear, and nothing for a human to correct. |
+
+Total is the sum, out of 45. I have not set a pass mark. Set one after you have scored real tickets (see "Test it" below), because a number I pick now would be a guess.
+
+## Automatic failures
+
+Any one of these fails the ticket, whatever the total:
+
+- A ticket with a stated deadline today and a group of people depending on it is ranked below P2. This is exactly your payroll case.
+- Anything touching pay, payments or contractual commitments is ranked P4.
+- A ticket affecting a whole team or department is ranked P4.
+- The AI states a priority with confidence when the ticket gives too little to rank it, and does not say what is missing.
+- The AI says an alert or escalation has gone out when it has only been drafted.
+
+I kept this list short on purpose. It is for outcomes like the five-hour delay on the payroll ticket, not for a ticket that was merely a notch off.
+
+## What to record for each ticket
+
+- Total score
+- Any automatic failure
+- The one most important correction a human made
+- What would need to change in the prompt or the process before the next attempt (for example, "tell the AI to treat any deadline within the working day as at least P2")
+
+## Things I guessed, which you should check
+
+- I do not know your own P1 to P4 definitions or response times. Paste them in and I will tie the automatic failures to them, for example "P2 means response within X hours" using your numbers. For now I have used "below P2" as the line, which may be wrong for you.
+- You gave one bad example. Three or four more, especially tickets that were ranked too high, would show me whether area 5 is worth keeping.
+- Which functions count as "cannot stop" (area 3) is your call. I named payroll and payments because of your example.
+
+## Test it before you trust it
+
+This rubric has not been tried. Before you use it for anything real:
+
+1. Take ten to fifteen past tickets where you already know the right priority, including the payroll one and a few boring ones.
+2. Score the AI's call on each with this rubric.
+3. Check that the payroll ticket fails and that the mouse ticket scores well. If the scores do not match what a careful person on your team would say, change the rubric, not the scoring.
+4. Have a second person score the same tickets. If you two disagree a lot on an area, its wording is too loose.
+
+Revise it once real use shows an area is missing, or one that nobody ever scores low.

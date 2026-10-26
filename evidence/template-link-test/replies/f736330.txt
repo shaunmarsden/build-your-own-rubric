@@ -1,0 +1,58 @@
+I built this from your two good examples and the seeded loaf. The loaf is the model for the first two areas and the first two automatic failures.
+
+# Bakery Allergen Statement Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Every named allergen is listed | Read the recipe sheet line by line. Does the statement include every allergen the sheet names or clearly contains (oats, nuts, milk, eggs, wheat and so on)? | / 5 |
+| Vague ingredients are caught | Does the draft spot ingredients that could hide an allergen ("seed mix", "chocolate", "spice blend", "flour mix") and say the sheet doesn't settle it? The seeded loaf failed here. | / 5 |
+| Confirmed facts are kept apart from guesses | Is each allergen either confirmed by the sheet or marked as unconfirmed? The draft must not quietly fill a gap with a best guess in either direction. | / 5 |
+| Missing information is named | When the sheet is silent, does the draft say exactly what is missing and who to ask, as in your chocolate and soya example ("Check the supplier sheet before printing")? | / 5 |
+| Nothing is invented | No allergen that isn't on the sheet. No "free from", "nut-free" or "may contain" claim the sheet doesn't support. | / 5 |
+| It is the right recipe | Is the statement built from the right product and the current version of the sheet, not a similar product or an old recipe? | / 5 |
+| It is prepared for sign-off | Does the draft read as something for a named person to check before printing, not as finished and ready for the label? | / 5 |
+| The wording works on a label | Are allergens named plainly, in the way the label must show them, so a customer or staff member can find them quickly? | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Leaves out an allergen the recipe sheet names, or leaves out one that a vague ingredient could contain without saying that ingredient needs checking.
+- Treats a vague ingredient such as "seed mix" as safe, or lists only some of what it might contain.
+- Says a product is free from an allergen, or does not contain it, when the recipe sheet does not confirm this.
+- Fills a gap in the sheet with a guess and does not flag it.
+- Presents itself as approved or ready to print with no human check.
+- Is built from the wrong product's sheet or an out-of-date version.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+## Before you rely on it
+
+I can't know whether this rubric works until you test it. Do these three things first.
+
+1. Score the seeded loaf statement that caused the reaction. It should hit an automatic failure. If it doesn't, the rubric is too soft and needs fixing.
+2. Score your two good examples. They should each land at 4 or 5. If not, the rubric is too harsh.
+3. Score five or so real drafts from past products, ideally some with vague ingredients, and check that a careful person at the bakery agrees with the result.
+
+This rubric checks the draft against the recipe sheet. It can't catch a mistake in the sheet itself, or a supplier who changed an ingredient since it was written. Someone with responsibility for labelling should still check every statement before it is printed. The rubric helps them do that consistently and does not replace them.
+
+Revise it once real use shows an area is missing, or one that nobody ever scores low.

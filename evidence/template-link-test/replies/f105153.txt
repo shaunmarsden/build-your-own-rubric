@@ -1,0 +1,63 @@
+Thanks. This task is a good fit: you have a real bad example and a real cost, so I can build the rubric from what went wrong rather than guess. Here is a first draft.
+
+The payroll ticket tells me the main lesson. The ticket gave a deadline ("pay run is at noon") and the tool ignored it. Marking a ticket too low costs far more than marking it too high, so the rubric treats those two mistakes differently.
+
+## Draft rubric: AI ticket priority (P1 to P4)
+
+### Step 1: Check for automatic failures first
+
+If any of these happen, the output fails. Do not score it.
+
+1. The ticket mentions a deadline within the next working day, or pay, payroll or payments to staff or customers, and the tool ranked it below P2.
+2. The tool was unsure (it said so, or the ticket is vague) and still ranked the ticket P3 or P4 instead of passing it to a person.
+3. The reason names a deadline, number of people or system that is not in the ticket.
+4. No reason was given.
+5. Salary figures or other personal details appear in the reason.
+
+Your payroll example fails on number 1.
+
+### Step 2: Score each area from 1 to 5
+
+Use the same scale for every area:
+
+- 1 = wrong, would cause harm
+- 2 = weak, a person must redo it
+- 3 = useful, but a person must check it
+- 4 = strong, minor fix
+- 5 = right, no change
+
+| # | Area | What a 5 looks like |
+|---|------|---------------------|
+| 1 | Deadline caught | Every time limit in the ticket is noticed and used ("by noon", "before the audit") |
+| 2 | Impact read correctly | It sees who is affected, how many, and whether work or pay stops |
+| 3 | Matches our definitions | The priority fits the written P1 to P4 rules, not the tool's own idea of urgent |
+| 4 | Reason can be checked | One line that points to words in the ticket |
+| 5 | Facts apart from guesses | It says what the ticket states and what it is inferring |
+| 6 | Missing information flagged | If the ticket lacks a deadline or a head count, it says so and routes to a person |
+| 7 | No invented urgency | A P1 is backed by the ticket's own words, not by the user's tone |
+| 8 | Sensitive details left out | The reason stays free of personal or payroll detail |
+
+Total out of 40. Under 24 means do not trust the tool for that kind of ticket.
+
+I left out tone and "action prepared for approval". If the tool only sets a priority, they do not apply. If it also pages the on-call engineer on its own, tell me and I will add a ninth area.
+
+### Step 3: Record for each ticket
+
+- Total score, and any automatic failure
+- Which way the miss went (too low or too high). Count these separately.
+- The one correction a person made
+- What to change in the prompt before the next attempt
+
+### Check against your own example
+
+Scoring the payroll ticket: deadline caught 1, impact read 1, definitions 1 or 2, plus automatic failure 1. If the rubric had not failed that ticket, I would call the rubric broken.
+
+## What I need from you
+
+1. Your written P1 to P4 definitions, with target response times. Area 3 is empty without them.
+2. Any other tickets the tool got wrong, even small ones. One bad example is thin, and the draft leans on it.
+3. Whether the tool does anything beyond giving a priority.
+
+## Before you trust it
+
+This draft is untested. Run it on about 15 to 20 past tickets, including the payroll one and a few the tool got right. Score them yourself, then check whether the rubric's verdict matches what a careful person on your desk would say. If it passes a ticket your team would call a miss, or fails one they would call fine, change the rubric. After a few weeks of real use, drop any area that nobody ever scores low.

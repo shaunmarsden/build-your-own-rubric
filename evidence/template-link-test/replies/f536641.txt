@@ -1,0 +1,64 @@
+Here is your rubric. Your answers meet the bar for building one. The task has real stakes, and you gave a concrete bad example, the sesame omission. Your second good example, where the AI flagged an unknown, shapes much of what follows.
+
+# Rubric: AI-drafted allergen statements
+
+## What this rubric is for
+
+Each statement is a draft. A person checks it against the recipe sheet before it goes on a label. The rubric tells that person how good the draft is and what to fix in the process. It does not replace the check.
+
+## Scored areas
+
+Score each area from 1 to 5, using the scale below.
+
+1. **Completeness.** Every allergen the recipe sheet names appears in the statement.
+2. **Vague ingredients flagged.** The AI flags any ingredient that could hide an allergen, such as "seed mix", "spice blend", "chocolate", "flour blend" or "natural flavour". It does not guess and does not skip it. This is the area that would have caught the sesame failure.
+3. **Nothing unsupported.** No allergen appears that the recipe sheet does not support. If the AI adds one as a precaution, it says so and says why.
+4. **Confirmed vs unknown.** The statement separates what the sheet confirms from what it does not say. An unknown is never written as "none".
+5. **Missing information named.** For each unknown, the AI says what to check and where, as in your second good example ("Check the supplier sheet before printing").
+6. **Label wording.** Allergens are named in the form your labels use, with the specific cereal given where it matters (oats, wheat, barley). Check the exact list and wording rules for your country; I have not assumed them.
+7. **Prepared for approval.** The output reads as a draft awaiting a person's sign-off. It never says "approved", "ready to print" or "safe".
+
+That is seven areas, under the limit of ten.
+
+## Scale (for each area)
+
+- **1, unusable:** the area is missing or wrong in a way that could cause harm.
+- **2, weak:** partly done, with gaps a person would have to find unaided.
+- **3, useful with review:** mostly right, but a person must check this area line by line.
+- **4, strong with minor fixes:** right, with small wording or format slips.
+- **5, ready to use:** right, with nothing to change in this area.
+
+A "ready to use" score still means the person checks the statement against the recipe sheet before printing. At these stakes the rubric never replaces that check.
+
+**Gate rule:** if area 1 or area 2 scores below 4, send the draft back whatever the total. Those two areas are where the harm happened.
+
+## Automatic failures
+
+Any one of these fails the output, whatever it scores:
+
+- An allergen named on the recipe sheet is missing from the statement.
+- An ingredient with no breakdown, like "seed mix", is treated as allergen-free or silently skipped.
+- An unknown is presented as confirmed absent ("contains no sesame", "free from nuts") with no source.
+- The statement claims "suitable for", "safe for" or "free from" anything without a source on the sheet.
+- The output says or implies it is approved or ready to print.
+
+The sesame statement fails on the second point.
+
+## What to record for every scored output
+
+- The total score, out of 35.
+- Any automatic failure.
+- The single most important correction the human made.
+- What must change in the prompt or process before the next attempt.
+
+For the second item on that last line, the likely prompt change is already clear from the sesame case. Tell the AI: "If any ingredient has no breakdown, list it under 'Unconfirmed' and say what to check. Never leave it out."
+
+## Before you trust it
+
+1. Run it on 5 to 10 past statements, including the seeded loaf. The seeded loaf should come out as an automatic failure. If it does not, fix the rubric before anything else.
+2. Have a person who knows the recipes score the same statements independently. If their conclusions differ from the rubric's, revise it.
+3. Revise the rubric after real use. Drop any area nobody ever scores low, and add one if a new kind of failure turns up.
+
+## One gap in the evidence
+
+Your bad example covers an allergen being left out. The risk of an allergen being wrongly added, or of cross-contact wording ("may contain") being invented or dropped, is something I have guessed at. If you have an example of either, send it and I will tighten areas 3 and 4 around it.

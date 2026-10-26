@@ -1,0 +1,122 @@
+{
+ "f665893": {
+  "scenario": "helpdesk",
+  "arm": "inline",
+  "run": 2
+ },
+ "f536641": {
+  "scenario": "allergens",
+  "arm": "current",
+  "run": 1
+ },
+ "f439799": {
+  "scenario": "contracts",
+  "arm": "nolinks",
+  "run": 2
+ },
+ "f195756": {
+  "scenario": "newsletter",
+  "arm": "current",
+  "run": 2
+ },
+ "f157623": {
+  "scenario": "newsletter",
+  "arm": "inline",
+  "run": 1
+ },
+ "f607691": {
+  "scenario": "allergens",
+  "arm": "nolinks",
+  "run": 2
+ },
+ "f453701": {
+  "scenario": "contracts",
+  "arm": "current",
+  "run": 1
+ },
+ "f512157": {
+  "scenario": "allergens",
+  "arm": "nolinks",
+  "run": 1
+ },
+ "f912540": {
+  "scenario": "helpdesk",
+  "arm": "nolinks",
+  "run": 2
+ },
+ "f618687": {
+  "scenario": "newsletter",
+  "arm": "nolinks",
+  "run": 1
+ },
+ "f293288": {
+  "scenario": "contracts",
+  "arm": "nolinks",
+  "run": 1
+ },
+ "f743112": {
+  "scenario": "helpdesk",
+  "arm": "current",
+  "run": 1
+ },
+ "f352308": {
+  "scenario": "contracts",
+  "arm": "inline",
+  "run": 1
+ },
+ "f418415": {
+  "scenario": "contracts",
+  "arm": "inline",
+  "run": 2
+ },
+ "f818856": {
+  "scenario": "newsletter",
+  "arm": "current",
+  "run": 1
+ },
+ "f494708": {
+  "scenario": "newsletter",
+  "arm": "nolinks",
+  "run": 2
+ },
+ "f682374": {
+  "scenario": "helpdesk",
+  "arm": "nolinks",
+  "run": 1
+ },
+ "f736330": {
+  "scenario": "allergens",
+  "arm": "inline",
+  "run": 1
+ },
+ "f782690": {
+  "scenario": "contracts",
+  "arm": "current",
+  "run": 2
+ },
+ "f261660": {
+  "scenario": "allergens",
+  "arm": "current",
+  "run": 2
+ },
+ "f765419": {
+  "scenario": "helpdesk",
+  "arm": "inline",
+  "run": 1
+ },
+ "f296495": {
+  "scenario": "newsletter",
+  "arm": "inline",
+  "run": 2
+ },
+ "f105153": {
+  "scenario": "helpdesk",
+  "arm": "current",
+  "run": 2
+ },
+ "f579643": {
+  "scenario": "allergens",
+  "arm": "inline",
+  "run": 2
+ }
+}

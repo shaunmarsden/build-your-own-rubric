@@ -1,0 +1,16 @@
+Writing a rubric for this would be overhead, so I'm stopping here instead of building one. Your answers meet two of the stop conditions in the file you pasted.
+
+1. **There are no real stakes.** You said a miss costs "nothing much". A rubric is for repeated output where a failure does real damage, such as a wrong legal clause, a bad customer reply or a bad hiring call. A two-line newsletter intro isn't in that group. Scoring areas, a five-point scale and an automatic-failure list would take longer to fill in than the intro takes to write.
+
+2. **There's no bad example to build from.** You haven't seen a bad intro, and you didn't describe what one would look like. Any failure list I wrote would be guesswork, which the file warns against.
+
+Your two good examples are also nearly interchangeable, so a rubric would have very little to separate.
+
+For this task, reading the intro before you send the newsletter is enough. If it ever bothers you, write down what bothered you in one line. That line becomes your first real bad example.
+
+A rubric would earn its place if the stakes changed. Some cases where it might:
+- The newsletter goes to clients or the public, not just colleagues.
+- The AI starts writing the body, with dates, policy changes or names, not only the intro.
+- One bad intro (wrong tone, a joke that lands badly, a wrong fact) would embarrass someone.
+
+If any of those apply, or you have another repeated AI task where a miss would cost something, tell me about it and I'll start again from the questions at the top. To make it grounded, bring one real bad output and what it cost you.

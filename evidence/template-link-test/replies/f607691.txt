@@ -1,0 +1,62 @@
+This task has real stakes and you gave me a real bad example, so I can build the rubric. Here it is.
+
+The seeded loaf failure shapes most of it. The sheet said "seed mix", the AI left sesame out, and nobody knew the statement was incomplete. So the rubric has to catch two things: an allergen that is missing, and an ingredient the sheet doesn't explain that the AI quietly treated as safe.
+
+## Allergen statement rubric
+
+Score each area from 1 to 5. The scale is the same for every area:
+
+- 1: Unusable. Wrong or dangerous.
+- 2: Weak. Needs rewriting.
+- 3: Useful with review. Right idea, but a person has to fix real gaps.
+- 4: Strong with minor fixes. Wording or format only.
+- 5: Ready to use. Nothing to correct.
+
+### The scored areas
+
+1. **Every allergen on the sheet is listed.** This includes allergens inside compound ingredients, such as the milk in a chocolate or the egg in a glaze. Check the statement line by line against the recipe sheet.
+2. **Vague ingredients are flagged, not guessed.** "Seed mix", "chocolate", "flavouring", "spread" and "glaze" don't say what is in them. The statement should say the sheet doesn't say, and not treat the ingredient as allergen-free. Your second good example does this well.
+3. **Nothing is invented.** No allergen is listed that the sheet doesn't support. No "free from" or "suitable for" claim appears unless the sheet clearly backs it.
+4. **Confirmed facts are kept apart from unknowns.** A reader can see which allergens are confirmed and which are open questions.
+5. **Missing information is named, with a next step.** For example: "Sheet doesn't say whether the chocolate contains soya. Check the supplier sheet before printing." The AI should say what to check and where.
+6. **Cross-contact is not settled by guesswork.** The statement should not claim "may contain" or "free from" for traces unless the sheet says so. If the sheet is silent, the statement should say it is silent.
+7. **Wording fits the label.** Allergen names are plain, consistent, and in the format your labels use.
+8. **It is prepared for approval, not treated as final.** The output should read as a draft for a named person to check. It should not say "approved" or "safe to print".
+
+That is eight areas, under the limit of ten.
+
+### Automatic failures
+
+Any one of these fails the output, whatever its score:
+
+- An allergen that is on the sheet, including inside a compound ingredient, is missing from the statement.
+- An ingredient whose allergen content is unknown is treated as having none. The seeded loaf is this failure.
+- A "free from" or "suitable for" claim has nothing on the sheet behind it.
+- An allergen is added or removed with no basis on the sheet.
+- The statement is presented as checked or ready to print.
+
+Keep this list short. It is for outcomes that could hurt someone. A clumsy sentence is a low score in area 7, not an automatic failure.
+
+### What to record for each statement
+
+- The total score out of 40.
+- Any automatic failure, and which one.
+- The single most important correction the person made.
+- What to change in the prompt or process before the next one.
+
+An automatic failure outranks the total. A statement can score 36 out of 40 and still be unfit to print.
+
+## Two things to do before you trust it
+
+1. **Test it on the seeded loaf.** Run the original statement through the rubric. It must come out as an automatic failure. If it doesn't, the rubric is wrong, so fix it before using it.
+2. **Test it on 5 to 10 real past statements.** Include some your team already judged good and some already judged bad. Check that the rubric scores them the way a careful person would. Allergen labelling is a safety-critical job. A person with allergen training should still sign off every label before it is printed. The rubric helps that person. It doesn't replace them.
+
+## A note on the root cause
+
+The rubric catches the problem after the AI has drafted. The deeper fix is at the source. If "seed mix" on a recipe sheet doesn't say what is in the mix, any drafter, human or AI, is guessing. Consider having the recipe sheets list the seeds in every mix. That would stop this failure from starting in the first place.
+
+## What I assumed, so please check it
+
+- I assumed your statements follow a fixed list of major allergens. If you are in the UK or EU, that is the 14 allergens. Tell me if yours is different and I will adjust area 1.
+- I did not cover "may contain" wording in depth, because your examples didn't show how you handle it today. If you have a house rule for it, tell me and I will add it as its own area.
+- I have not seen your real recipe sheets or labels. If you share one anonymised sheet and its statement, I will check the rubric against them.

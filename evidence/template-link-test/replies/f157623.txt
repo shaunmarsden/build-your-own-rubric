@@ -1,0 +1,11 @@
+I'm not going to build a rubric for this one, and the reason is in your own answers.
+
+You told me nothing has gone wrong, you have no bad example, and a missed failure costs "nothing much". The instructions I'm working from say to stop in exactly that case. A rubric is worth the effort when a bad output would cost you something real. Here it wouldn't, so a rubric would be more work than the task deserves. And with no bad example, I would be guessing at what could go wrong rather than building from something that happened. A guessed rubric looks careful but isn't grounded in anything.
+
+What I'd do instead:
+
+- Keep reading the two-line intro before it goes out, as you do now. For a friendly line in an office newsletter, that is enough.
+- Your two good examples are useful. If you want the tool to keep that tone, paste them into your prompt and say "write the intro in this style". That is cheaper than a scoring sheet and does more.
+- Keep a note of anything that ever goes wrong. For instance, the intro gets a date wrong, mentions something it shouldn't, or jokes about a colleague. Even one such case gives me a real bad example to build from.
+
+If that happens, or if you start using AI for something where a mistake would matter (a message to customers, a policy notice, anything that goes outside the office), come back with the task, the bad example and what it cost, and I'll build you a proper rubric then.

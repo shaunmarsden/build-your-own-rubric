@@ -1,0 +1,56 @@
+Your task has real stakes and your bad example is specific, so I can build this from what happened rather than guess. The miss that cost you about 30,000 shaped most of it: a summary said "no automatic renewal" when the clause said the contract renews for a year unless you give 60 days' notice. The rubric puts renewal and notice terms in their own area and makes getting them wrong an automatic failure.
+
+```markdown
+# Supplier Contract Clause Summary Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Accuracy of terms | Every number, period, date and amount matches the contract. "90 days" in the clause is "90 days" in the summary, not "about three months" and not "30 days". | / 5 |
+| Renewal and notice | The summary says whether the contract renews, for how long, and how much notice is needed to stop it. It says this for every renewal or termination clause, not just the first one it finds. | / 5 |
+| Conditions and caveats | Words like "unless", "provided that", "subject to" and "except" in the clause are still in the summary. A rule with an exception has not been turned into a plain rule. | / 5 |
+| Liability and cost | Liability caps, penalties, price increases and payment terms are stated with their limits, for example "12 months of fees". | / 5 |
+| Confirmed versus assumed | The summary shows which points are written in the clause and which are the tool's reading or guess. Nothing inferred is stated as fact. | / 5 |
+| Gaps and unclear clauses | The summary says when a clause is missing, vague or contradicts another clause. It does not fill the gap with a likely answer. | / 5 |
+| Traceability | Each point names its clause number, so a reader can check it against the contract in under a minute. | / 5 |
+| Escalation and approval | Anything that needs a decision or legal advice is passed on as "check with legal" or "needs sign-off". The summary does not say anything is agreed, safe or approved. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- States the opposite of a renewal, termination or notice clause, for example "no automatic renewal" where the clause renews the contract unless notice is given.
+- Gives a notice period, deadline, renewal length, liability cap or fee that differs from the contract text, or leaves one out when the clause contains it.
+- Describes a clause that is not in the contract, or states something as confirmed that the contract does not say.
+- Tells the team the contract is safe to sign, or that no legal review is needed.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+## How to use this
+
+- Check the renewal, notice and liability points against the contract text yourself every time. These are where your 30,000 loss came from, so do not rely on the score for them.
+- Before you trust this rubric, score five to ten past summaries with it. Include your bad one, which should hit an automatic failure. Include your two good ones, which should score 4 or 5. If the scores do not match what a careful person would say, change the rubric.
+- After a few weeks, drop any area nobody ever scores below 4, and add an area if a new kind of mistake gets through.
+```
+
+Two suggestions that follow from your example, if you want them. First, add a line to the prompt you give the summarising tool: "For every renewal, termination or notice clause, quote the clause wording, then give the plain-English version." That makes the failure you had much easier to see. Second, set a calendar reminder for the notice date at signing, so it does not depend on anyone reading a summary correctly.
+
+If you send me three or four more bad summaries, I can check whether the areas and automatic failures cover them or whether something is missing.

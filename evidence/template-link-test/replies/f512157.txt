@@ -1,0 +1,59 @@
+Your answers are enough to build this. The stakes are real (an allergic reaction, a legal case, a recall), and your bad example is specific: "seed mix" on the recipe sheet became a statement with no sesame in it. Your second good example shows the behaviour to reward. When the sheet doesn't say, the tool says so and sends someone to check.
+
+Here is the rubric.
+
+# Rubric: AI-drafted allergen statements
+
+## What this scores
+One allergen statement drafted by the AI from one recipe sheet. A person scores it before anything is printed.
+
+## The scoring areas (7)
+Score each area from 1 to 5 using the scale below.
+
+1. **Every allergen on the sheet is listed.** Compare the statement against each ingredient line. Nothing that the sheet names is left out, including allergens inside compound ingredients (for example, milk in a chocolate coating or gluten in a soy sauce).
+2. **Vague ingredients are flagged, not guessed.** Wherever the sheet says something like "seed mix", "spice blend", "flavouring" or "chocolate chips" without naming what is in it, the statement says the contents are unknown and tells the reader what to check. The tool must not assume the item is safe, and must not quietly assume what it contains. This is the area your seeded loaf failed.
+3. **Nothing is added that the sheet doesn't support.** The statement does not list an allergen that no ingredient supports, and does not say "may contain" or "free from" anything on a hunch.
+4. **Confirmed, unconfirmed and missing are kept apart.** The statement shows which allergens come straight from the sheet and which are open questions. The reader can tell "contains oats" (on the sheet) from "soya not confirmed" (not on the sheet).
+5. **It says what to do next.** Each open question names the check and the document to use (for example, "Check the supplier sheet before printing").
+6. **Cross-contact and shared equipment are not invented.** If the sheet is silent about shared equipment or other products made in the same area, the statement says it has no information. It neither adds a precautionary line on its own nor leaves the question unmentioned.
+7. **It is ready for a person to approve, not treated as final.** The output reads as a draft for sign-off. It does not say "approved", "checked" or "safe to print".
+
+## The scale (use for every area)
+- **1, unusable:** Wrong in a way that could hurt someone, or the area is ignored.
+- **2, weak:** Right in places, but a reader would be misled on this point.
+- **3, useful with review:** Mostly right; a careful person would need to fix one or two things.
+- **4, strong with minor fixes:** Right, with only small wording or layout changes needed.
+- **5, ready to use:** Correct and clear; nothing to change on this point.
+
+Total out of 35. A total does not override an automatic failure.
+
+## Automatic failures
+Any one of these means the statement must not be printed, whatever its score:
+
+- An allergen named on the recipe sheet is missing from the statement.
+- A vague ingredient ("seed mix") is treated as if it had no allergens, or is silently turned into a guessed list.
+- The statement says a product is free from an allergen when the sheet does not show that.
+- The statement says it is approved, verified or safe to print.
+- The statement is built on a recipe sheet that is missing, partial or unreadable, and does not say so.
+
+Keep this list short. Add to it only after a real near-miss.
+
+## What to record each time
+- Product and recipe sheet version
+- Total score, and any automatic failure
+- The single most important correction the human made
+- What to change in the prompt or process before the next draft (for example, "add a rule to flag blends")
+
+## Check it before you trust it
+This is a tool for a person to apply. Before it guards anything real:
+
+1. **Run it on your bad example first.** Put the seeded-loaf sheet and the AI's original statement through the rubric. It should trigger an automatic failure and score area 2 at 1. If it does not, fix the rubric before using it.
+2. **Run it on your two good examples.** The granola bar and the soya-query statement should score 4 or 5.
+3. **Score about ten real statements with a colleague**, each of you working alone, and compare. Where you differ by more than a point, the scale wording for that area needs tightening.
+4. **Revise after real use.** Drop an area nobody ever scores low, and add one if a miss turns up that it didn't cover.
+
+## Two things to be aware of
+- **This checks the AI's draft against your recipe sheet. It does not check the recipe sheet itself.** If the sheet is wrong or out of date, a perfect statement will still be wrong. Someone also needs to keep the sheets current when a supplier changes an ingredient.
+- **I don't know your local labelling rules.** Which allergens must be declared, how they must be formatted, and what the law says about "may contain" wording depend on where you sell. Have whoever owns food safety at the bakery (or your local authority) confirm area 1 covers the full list you are required to declare. I haven't assumed a list.
+
+If you paste in the seeded-loaf sheet and the original AI statement, I can score them against this so you can see whether the rubric catches what it should.

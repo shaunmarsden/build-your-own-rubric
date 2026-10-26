@@ -1,0 +1,13 @@
+I'm not going to build a rubric for this one, and the reason comes from your own answers.
+
+The instructions I was given say to stop when the task has no real stakes if it goes wrong. You told me a bad intro costs "nothing much", and that nothing has gone wrong so far. A two-line newsletter intro fits that. A fixed scoring scale, a list of automatic failures and a record sheet would take longer to fill in than the intro takes to read. They would add work without catching anything that matters.
+
+You also couldn't give me a bad example. A rubric built without one would be guesswork about what might go wrong, not a check based on something that has.
+
+What to do instead:
+
+- Read the two lines before the newsletter goes out. That is the whole check.
+- If you want a standing instruction for the AI, your two good examples already show the style. Something like: "Write a friendly two-line intro for our monthly office newsletter, in the style of these examples. No jokes about named people, no news that isn't in the issue."
+- If an intro ever does go wrong (it names someone it shouldn't, hints at news that isn't in the issue, or gets the tone wrong for a sensitive month), save it. That becomes your first bad example, and you can come back and run this again with something real to work from.
+
+The same would change if the AI started writing something with higher stakes, such as announcements about redundancies or policy changes, or anything sent outside the office. Then a rubric would be worth the effort.

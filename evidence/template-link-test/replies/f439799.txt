@@ -1,0 +1,68 @@
+Your answers are enough to build this. The task has real stakes (about 30,000 and a lost renegotiation), and your bad example is specific: the summary said "no automatic renewal" when the clause renewed for a year unless you gave 60 days' notice. I built the rubric around that failure and your two good examples.
+
+# Rubric: AI summaries of supplier contract clauses
+
+Use it on each summary before the procurement team relies on it, with the contract open next to it.
+
+## Scoring areas
+
+Score each area from 1 to 5 using the scale below.
+
+| # | Area | What you check |
+|---|------|----------------|
+| 1 | Exact terms | Numbers, periods, amounts and dates match the clause word for word (for example "90 days", "12 months of fees"). Nothing is rounded or paraphrased into a different meaning. |
+| 2 | Renewal, termination and notice | The summary says whether the contract renews or ends, how, and what notice is needed. It states the direction correctly, so "renews unless you give notice" is not turned into "no renewal". Where the start date is known, it works out the last date to give notice. |
+| 3 | Conditions and exceptions | Words like "unless", "provided that", "subject to" and "except" survived. A rule is not reported without the condition attached to it. |
+| 4 | Cost and liability | Fees, price increases, penalties, liability caps and indemnities are stated with their limits. Example: "Clause 14 limits liability to 12 months of fees." |
+| 5 | Fact versus reading | The summary separates what the clause says from what the AI thinks it means. Anything inferred is labelled as inferred. |
+| 6 | Gaps and cross-references | The summary names what it could not see: a missing schedule, a clause that points to another document, a defined term it was not given. It does not fill gaps with a guess. |
+| 7 | Handoff and traceability | Each point cites its clause number so a person can check it in under a minute. Anything that needs legal or a person's decision is flagged, as in "Check with legal if we need more cover." |
+
+That is seven areas. Your two good examples show areas 1, 2 and 7, which is why those are written the way they are.
+
+## Scale (same for every area)
+
+| Score | Meaning |
+|-------|---------|
+| 1 | Unusable. Wrong, missing, or the opposite of the clause. |
+| 2 | Weak. Partly right, but a reader who trusted it would be misled. |
+| 3 | Useful with review. Mostly right, but a person must check it before anyone relies on it. |
+| 4 | Strong with minor fixes. Correct and complete, with small gaps in wording or citation. |
+| 5 | Ready to use. Correct, complete, cited, and flags what it does not know. |
+
+Look at the lowest area score as well as the total. A summary can total 28 out of 35 and still have a 2 on renewal and notice. In your business that 2 is the one that costs 30,000. Treat any 1 or 2 in area 2 or 4 as "not ready", whatever the total.
+
+## Automatic failures
+
+These fail the summary whatever it scores. Each one is something that would have cost you money or a legal position.
+
+- It says the opposite of the clause on renewal, termination, notice, price or liability. Your bad example belongs here: "no automatic renewal" where the clause renews.
+- It leaves out an automatic renewal, a notice window or a liability cap that the clause contains.
+- It gives a wrong number, period or amount in any term that carries a deadline or a cost.
+- It says "there is no X" when the AI was not shown the whole clause, or the clause is unclear. It should say "I could not find X in the text provided."
+- It describes a clause that is not in the text, or a clause number that does not exist.
+- It says or implies the contract is safe to sign, or tells the team not to involve legal.
+
+## What to record for each summary
+
+1. The total score, and the lowest area score.
+2. Any automatic failure, and which one.
+3. The single most important correction the reviewer made.
+4. What must change in the prompt or process before the next summary. Examples: "tell the AI to quote the clause text for every notice period", "ask for the last date to give notice".
+
+A short log of these, kept in one place, will show you which area keeps failing.
+
+## One addition outside the rubric
+
+Your real loss was a missed date, not only a wrong summary. Whatever the rubric scores, a named person should put every notice deadline in a shared calendar when the contract is signed. The rubric catches the wrong summary. The calendar catches the one that slips through.
+
+## Before you trust it
+
+A rubric you have not tested is a guess. Do this first:
+
+1. Run it on your bad example. It should land as an automatic failure. If it does not, change the rubric.
+2. Run it on your two good examples. They should score 4 or 5. If they do not, the scale is too harsh.
+3. Take 8 to 10 past summaries where you still have the contract. Have a careful colleague score them without seeing your scores, then compare. Where you disagree, rewrite that line of the scale until two people would score it the same way.
+4. Revise after a month of real use. Drop any area nobody ever scores below 4, and add one if the same kind of mistake keeps slipping past it.
+
+If you want, send me the original contract clause and the bad summary, and I will check that the rubric as written would have caught it.

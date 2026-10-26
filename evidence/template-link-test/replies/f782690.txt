@@ -1,0 +1,64 @@
+Your answers are enough to build this. The task is repeated, a missed error cost you about 30,000, and you have a real bad example, so nothing here is a reason to stop. The rubric below is built from that bad example and your two good ones.
+
+# Rubric: AI summaries of supplier contract clauses
+
+## Scoring areas
+
+Score each area from 1 to 5 using the scale further down. There are seven.
+
+1. **Exact terms.** Notice periods, dates, amounts, caps and percentages match the clause word for word. Your good example quoted "90 days" exactly.
+2. **Renewal and exit terms.** The summary states whether the contract renews, for how long, and what notice stops it. If the clause says it renews for a year unless you give 60 days' notice, the summary says that. This is the area that failed in your bad example.
+3. **Conditions and exceptions.** Words like "unless", "subject to", "provided that" and "except" survive. A summary that drops the condition can reverse the meaning.
+4. **Fact versus reading.** The summary shows what the clause says and what the AI infers from it, and keeps the two apart.
+5. **Gaps named.** If the clause points to a schedule, another clause or a document the AI was not given, the summary says so instead of guessing.
+6. **Money at stake.** Liability caps, payment terms, penalties and the cost of renewing are stated. "Clause 14 limits liability to 12 months of fees" is the model.
+7. **Handoff to a person.** The summary says what to check with legal or the contract owner. It does not say the contract is fine to sign. Your second good example ended this way.
+
+Tone and length are not scored. If a summary is accurate, a few clumsy sentences do not matter much. Add an area for them later only if real use shows a problem.
+
+## Scoring scale (use for every area)
+
+| Score | Meaning |
+|---|---|
+| 1 | Unusable. Wrong, missing, or the opposite of the clause. |
+| 2 | Weak. Partly right, but a reader relying on it could be misled. |
+| 3 | Useful with review. Mostly right, but someone must check the clause before acting. |
+| 4 | Strong with minor fixes. Correct and complete, with small wording or detail gaps. |
+| 5 | Ready to use. Correct, complete, and clear about what is fact and what is not. |
+
+Total out of 35. Two rules sit on top of the total:
+
+- Any area scored 1 or 2 means the summary is not used, whatever the total. A high total can hide one bad area, and one bad area cost you 30,000.
+- Areas 1, 2 and 3 must score 4 or more before anyone relies on the summary without reading the clause themselves.
+
+## Automatic failures
+
+Any one of these fails the summary, whatever it scores. Throw it out and re-run it.
+
+- It states the opposite of the clause. Your bad example is the case: "no automatic renewal" where the clause renews for another year unless you give 60 days' notice.
+- It leaves out an automatic renewal, a notice period or a termination deadline that is in the clause.
+- It gives a wrong number, date, duration or amount for any money or time term.
+- It says the contract is safe, standard, approved or fine to sign.
+- It describes content that is not in the clause, or summarises a clause it was never shown as if it had read it.
+
+## What to record for every summary
+
+- Total score out of 35
+- Any automatic failure, and which one
+- The single most important correction the human made
+- What would need to change in the prompt or process before the next attempt (for example, "tell the AI to quote renewal and notice wording exactly and list any clause it could not see")
+
+## Test it before you trust it
+
+This is the step that matters most, and I cannot do it for you.
+
+1. Run the rubric on the summary that said "no automatic renewal". It should hit an automatic failure. If it does not, the rubric is wrong. Fix it before doing anything else.
+2. Run it on your two good examples. They should score 4 or 5 in every area. If they do not, the rubric is too harsh or unclear.
+3. Take five to ten more real summaries from past contracts where you know what the clause says. Have two people score them separately. Where they differ by more than a point, the scale wording needs work.
+4. Compare each score against what a careful reader would conclude from the clause itself. Trust the rubric for real decisions only when the two agree.
+
+After the first month of use, look at which areas nobody ever scores below 4 and which problems keep turning up that no area covers. Drop the first kind and add the second. Keep it at ten areas or fewer.
+
+## One suggestion outside the rubric
+
+Your loss came from a missed deadline, not only a wrong sentence. For any contract with a renewal clause, it may be worth having the AI also state the actual last date to give notice, once you know the start or renewal date, and having a person put that date in a calendar. A rubric catches a bad summary. It does not remind anyone of the date.

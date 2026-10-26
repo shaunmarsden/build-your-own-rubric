@@ -1,0 +1,62 @@
+I've written the rubric below. It passes the stop checks. A missed allergen has real stakes, and you gave a real bad example (the sesame miss), so I'm not guessing what goes wrong.
+
+## Allergen statement rubric
+
+**Task:** An AI tool drafts the allergen statement for each product label from the recipe sheet. A person checks it before it is printed.
+
+**How to use it:** Score each area from 1 to 5, using the scale below. Then check the automatic failures. An automatic failure ends the review, whatever the scores. A statement passes only if there is no automatic failure and no area scores below 4. The total is for comparing prompts or tools, not for passing a statement.
+
+### The scale (the same for every area)
+
+| Score | Meaning |
+|---|---|
+| 1 | Unusable. It would cause harm if printed. |
+| 2 | Weak. A serious problem a reviewer might miss. |
+| 3 | Useful with review. The reviewer has to fix real things. |
+| 4 | Strong with minor fixes. Wording or format only. |
+| 5 | Ready to use. Nothing to change. |
+
+### The scoring areas
+
+1. **Every allergen on the recipe sheet is listed.** Check each ingredient on the sheet against your allergen list and make sure each one appears. A 5 means nothing is missing and nothing is reworded in a way that changes the meaning.
+2. **Vague ingredients are flagged, not guessed.** Look for "seed mix", "spice blend", "chocolate", "flavouring", "margarine", "flour improver" or similar. Each one needs a note saying what could be hiding in it and what must be checked. A 5 means every such item is flagged. A 1 means the tool passed over one silently. This is the area that would have caught the sesame miss.
+3. **Confirmed facts are kept apart from assumptions.** The statement should show what the sheet states, what the tool inferred, and what it doesn't know. A 5 means a reader can tell which is which at a glance.
+4. **No "free from" claims without a source.** "No nuts" or "no soya" is only acceptable if the sheet or a supplier sheet says so. Silence on the sheet means "not stated", not "absent".
+5. **Detail survives.** Name the specific cereal (wheat, oats, rye) and the specific nut, as your local rules require. Keep conditions such as "contains milk in the glaze only". A 5 means nothing is flattened into "contains cereals" or "contains nuts".
+6. **Cross-contact wording is only what you gave it.** "May contain" lines should come from your own policy or the sheet. They should not be invented, and they should not be dropped.
+7. **Wording and format fit the label.** The language is plain enough for a customer, allergens are emphasised the way you emphasise them on every label, and nothing irrelevant is included.
+8. **It is prepared for approval, not presented as final.** It should be clearly marked as a draft and say what a person must check before printing. Your good example 2 ("Check the supplier sheet before printing") is a 5.
+
+### Automatic failures
+
+Any one of these fails the statement, whatever it scores:
+
+- An allergen that is on the recipe sheet is missing from the statement.
+- A vague or composite ingredient is passed over with no flag, as in the seeded loaf.
+- The statement says or implies a product is free from an allergen when no source confirms it.
+- It claims a check that never happened, such as "confirmed with supplier".
+- It is presented as ready to print with no human check.
+
+I'd keep this list short and keep it for harm. Over-declaring an allergen is annoying but safe, so I've left it as a scored area (7), not an automatic failure.
+
+### What to record for each statement
+
+- The total score and the lowest-scoring area
+- Any automatic failure
+- The single most important correction the human made
+- What has to change in the prompt or the recipe sheet before the next draft
+
+## Test it before you trust it
+
+I haven't tested this against any real outputs, so run these steps before you rely on it:
+
+1. Score about ten past statements. Include the seeded loaf, which should hit an automatic failure on the vague-ingredient rule, and your two good examples, which should pass.
+2. Have the person who normally checks your labels score the same ten on their own. If your scores and theirs disagree, fix the wording of the area they disagreed on.
+3. Revise it after real use. Drop an area nobody ever scores low, and add one if a new kind of miss turns up.
+
+## Two other points
+
+- The sesame miss started with the recipe sheet, which just said "seed mix". The rubric will catch that, but the cheaper fix is to make the sheet name every seed.
+- The legal list of allergens differs by country. Use your own country's official list for area 1 and don't rely on mine. A trained person must check every statement before printing. This rubric helps that person and does not replace them.
+
+To tighten the wording, tell me which country you're labelling for and whether you have a standard "may contain" policy.

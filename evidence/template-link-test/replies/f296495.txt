@@ -1,0 +1,16 @@
+I have not built a rubric, and I think you should not build one for this task.
+
+Your answers say a missed failure costs "nothing much", and you have no bad example because nothing has gone wrong. This file tells me to stop in that case. A rubric is a checklist you fill in every month. For a two-line newsletter intro, the checklist would cost more time than any mistake could cost you. You would also stop using it, and a rubric nobody fills in is worse than none.
+
+There is a second problem. Without a bad example, I would be guessing what "bad" looks like. A rubric built on guesses scores things that do not matter and looks more rigorous than it is.
+
+What I would do instead:
+
+1. Keep reading the intro before it goes out. That is already your check, and for this task it is enough.
+2. If an intro ever does go wrong, such as a wrong date, a joke that landed badly, or a tone that did not suit the office, write down what happened. That is your first real bad example.
+3. Come back and paste this file in again when one of these is true:
+   - a mistake in the newsletter would cost you something real (a client, a legal or HR matter, someone's feelings);
+   - the AI starts writing more than the intro, such as dates, policy changes or announcements;
+   - you have a bad example to build from.
+
+If you do have another task where the AI's output matters more, such as replies to customers, hiring screens or anything with figures in it, tell me about that one. It would pass the stakes test, and I would ask you the same four questions about it.

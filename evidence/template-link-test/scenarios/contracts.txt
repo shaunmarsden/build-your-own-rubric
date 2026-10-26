@@ -1,0 +1,7 @@
+My task: an AI tool summarises supplier contract clauses for our procurement team before we sign.
+
+Good examples: (1) A summary that quoted the exact notice period, "90 days", and flagged that the contract renews automatically. (2) A summary that said "Clause 14 limits liability to 12 months of fees. Check with legal if we need more cover."
+
+Bad example: a summary said "no automatic renewal" when the clause said the contract renews for another year unless we give 60 days' notice. Nobody caught it, we missed the notice window and were billed for a second year.
+
+What a missed failure costs: about a year of fees, roughly 30,000, plus we lose the chance to renegotiate.

@@ -1,0 +1,58 @@
+Thanks, that is enough to build a rubric from. The stakes are real (about 30,000 and a lost renegotiation), and your bad example tells us exactly what to guard against. The summary did not just miss something. It said the opposite of what the clause said, and it read as confident.
+
+Here is a rubric for the clause summaries. I built it from your three examples, so each area traces back to something that happened or something you called good.
+
+## Scoring areas
+
+Score each area from 1 to 5 (scale below).
+
+1. **Matches the clause.** Every statement in the summary is true to the clause text. Your bad example failed here: "no automatic renewal" against a clause that renews for a year.
+2. **Exact numbers and dates are quoted, not paraphrased.** Notice periods, fees, caps, durations. Your good example 1 did this ("90 days").
+3. **Renewal, termination and notice terms are stated with their deadline.** Not just "renews automatically" but "renews for 12 months unless we give 60 days' notice, so notice must be sent by [date]". This is the area that cost you the money.
+4. **Conditions and exceptions survived.** "Unless we give notice", "except in cases of...", "subject to...". A summary that keeps the rule and drops the condition is the usual way these go wrong.
+5. **Facts are separated from guesses.** If the summary interprets an unclear clause, it says so. It does not present an interpretation as what the contract says.
+6. **Gaps are named.** If a clause is missing, ambiguous, or refers to another document (a schedule, a policy) that was not supplied, the summary says that.
+7. **Points to the clause.** Each point gives the clause number, so a person can check it in under a minute. Your good example 2 did this ("Clause 14").
+8. **Hands off to the right person.** Where the risk is above what procurement should judge alone (liability, indemnity, anything unusual), it says to check with legal. Good example 2 again.
+9. **Nothing invented.** No obligations, deadlines or reassurances ("standard terms", "low risk") that the contract does not support.
+
+That is nine areas. If it feels long in use, areas 7 and 8 are the first to merge or drop.
+
+## Scale
+
+- **1 Unusable:** wrong or misleading on a clause that matters.
+- **2 Weak:** mostly right, but missing a term or condition that someone could act wrongly on.
+- **3 Useful with review:** broadly right, but a reader has to go to the contract to be sure of the key terms.
+- **4 Strong with minor fixes:** accurate and complete on key terms, with small gaps in wording or clause references.
+- **5 Ready to use:** accurate, quotes exact terms, gives deadlines, flags gaps, and a reader could act on it without opening the contract.
+
+## Automatic failures
+
+Any one of these fails the summary, whatever else it scores:
+
+- It states the opposite of, or contradicts, what a clause says (your 30,000 mistake).
+- It leaves out an automatic renewal, or a notice period, that exists in the contract.
+- It gives a number or date that does not match the contract.
+- It says a clause or protection exists when the contract does not contain it.
+- It tells the reader a clause is fine or standard without saying what it actually says.
+
+Keep this list short. If you find yourself adding a sixth item, it is probably a scored area, not a failure.
+
+## What to record for each summary
+
+- The total score.
+- Any automatic failure.
+- The one most important correction a person made.
+- What to change in the prompt or process before the next one. For example, "make the tool list every notice period and renewal term in a separate section."
+
+## One process fix the rubric cannot give you
+
+A rubric scores a summary after it is written. In your case a person also needs to check the actual clause text for renewal, notice, termination and liability, every time, before signing. Those four carry the cost. The rubric tells you how good the summaries are. It does not replace reading those four clauses.
+
+## Before you trust it
+
+Test it. Take five to ten past summaries where you know what the contract said, including your bad one, and score them. Check two things. First, does your bad example get an automatic failure? If it does not, the rubric is wrong. Second, do the scores match what a careful person on your team would conclude? Where they disagree, change the rubric.
+
+I only had one bad example, so the failure list is built mostly from that one case. As you find more ways summaries go wrong, add them. And if an area never scores below 4 after a few months, drop it.
+
+If you send me two or three more bad summaries, even short ones, I can check whether this rubric would have caught them.

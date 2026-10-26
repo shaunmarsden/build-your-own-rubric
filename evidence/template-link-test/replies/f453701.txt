@@ -1,0 +1,62 @@
+Your answers are enough to build this. The task has real stakes (about 30,000 plus a lost renegotiation), and you have a real bad example, so I'm not guessing.
+
+## Rubric: AI summaries of supplier contract clauses
+
+**Use it:** every time a summary is about to go to procurement before signing. Score it against the clause text itself, never against your memory of the contract.
+
+### Scoring areas (score each 1 to 5)
+
+1. **Quoted figures match the clause.** Notice periods, durations, dates, fees, caps. The summary should use the exact figure from the clause, as in "90 days", not "about three months".
+2. **Renewal and exit mechanics are right.** Whether the contract renews automatically, for how long, how much notice stops it, and what counts as valid notice.
+3. **Conditions and caveats survived.** "Unless", "subject to", "except", carve-outs and caps all made it into the summary. A summary that keeps the rule and drops the condition fails here.
+4. **Confirmed vs interpreted.** The summary makes clear what the clause says and what is the AI's reading of it.
+5. **Missing information is named.** Clauses it was not given, schedules it did not see, cross-references it could not follow, and defined terms it could not check. It says "I have not seen X" instead of staying silent.
+6. **Money and liability exposure is surfaced.** Liability caps, penalties, termination fees and price-change rights are shown with their figures, so procurement can see what a mistake would cost.
+7. **Action is prepared, not declared done.** Deadlines are flagged for a person to diarise and unclear points go to legal. The summary never says the contract is fine, safe or approved.
+
+Seven areas keeps it short enough to fill in during a normal sign-off.
+
+### Scale
+
+| Score | Meaning |
+|---|---|
+| 1 | Unusable. Wrong or misleading, and would cause harm if relied on. |
+| 2 | Weak. Gets the main point but has a material gap or error. |
+| 3 | Useful with review. Mostly right, but a person must check it line by line. |
+| 4 | Strong with minor fixes. Accurate; small wording or detail changes only. |
+| 5 | Ready to use. Accurate against the clause, caveats intact, gaps named. |
+
+Record the lowest area score as well as the total. A total can hide one disastrous area, and your bad example was one wrong line in an otherwise reasonable summary. A suggested starting rule: ready to use only if no area is below 4 on areas 1 to 3. Adjust that once you have used it.
+
+### Automatic failures
+
+Any one of these fails the output, whatever the score:
+
+- It states the opposite of the clause on renewal, notice, termination or liability (for example "no automatic renewal" when the clause renews for another year unless you give 60 days' notice).
+- It gives a notice period, date, fee or cap that is not in the clause.
+- It says a right, penalty or renewal is absent when it has not seen the relevant clause. Not seeing a term is not the same as the term not existing.
+- It leaves out an automatic renewal or notice deadline that is in the text it was given.
+- It says or implies the contract is cleared, safe to sign or legally reviewed.
+
+### What to record for each summary
+
+- Total score and lowest area score
+- Any automatic failure, and which one
+- The single most important correction a person made
+- What to change in the prompt or process before the next run
+
+### A process change worth making now
+
+Your loss came from one unchecked line, so the rubric only helps if someone compares the summary with the clause. Make it a standing rule that the renewal and notice lines are checked against the clause text every time. Ask the tool to quote the clause wording next to each of those lines, so the check takes a minute. A minute of checking against a 30,000 loss is cheap.
+
+### Quick test against what you already have
+
+- **Your bad example:** it fails automatically on the first failure rule. It states the opposite of the clause, and the cost was real.
+- **Good example 1:** this should score 5 on areas 1 and 2. It quotes "90 days" and flags the auto-renewal.
+- **Good example 2:** this does well on area 6 and area 7, because it points to legal. It says nothing about renewal. That is fine if the clause was only about liability, but check it for area 5.
+
+### Before you trust it
+
+A person has to apply this rubric, because it cannot score itself. Run it on 5 to 10 past summaries, including the one that cost you the second year. Check that the scores match what a careful reader would conclude. If an area never scores below 4, or you keep wishing you could score something it does not cover, revise it. My guess is that the likely gaps are payment terms and price-increase clauses, but your real examples should decide that, not me.
+
+If you can share one more past summary that was wrong in a smaller way, I can check whether the scale would have caught it.

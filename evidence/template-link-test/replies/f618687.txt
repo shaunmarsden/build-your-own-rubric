@@ -1,0 +1,9 @@
+I am not going to build a rubric for this one, and the reason is in your own answers.
+
+The guide says to stop when the task has no real stakes if it goes wrong. You told me a missed failure costs "nothing much", and that nothing has gone wrong so far. A two-line newsletter intro fits that. A rubric means setting up scoring areas, a scale and a list of automatic failures, and then someone has to fill it in each month. For this task that is more work than the thing it would protect, and a rubric nobody fills in is worse than none.
+
+There is a second problem. You have no bad example. The guide says a rubric should be built from what actually goes wrong, and you have nothing that has gone wrong. I would be guessing at failures, and a guessed rubric is not worth trusting.
+
+What I would do instead is read the two lines before the newsletter goes out. Your good examples are short, plain and friendly, and you can spot anything that is not in about five seconds. If you want a little help, put this in the prompt you give the AI tool: "Two lines, friendly and plain, no jokes about people, no mention of anyone by name, no promises about dates or events I have not given you." That covers the few things that could go wrong with an intro, and it takes one sentence, not a scoring system.
+
+Come back to this if something changes. For example, if the intro starts to carry real content, such as a policy change, a deadline, a name or an announcement about people, or if one ever goes out and causes a problem. Then you would have a real bad example and a real cost, and a rubric would be worth building. Bring that example and I will build it from there.

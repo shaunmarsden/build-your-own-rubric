@@ -1,0 +1,13 @@
+I am not going to build a rubric for this one, and the guide you pasted says why.
+
+It tells me to stop in two cases, and your answers hit both.
+
+1. There are no real stakes. You said a missed failure costs "nothing much". A two-line newsletter intro that comes out a bit flat or oddly worded is fixed by reading it before you send it. A scoring scale, a list of automatic failures and a record sheet would take more effort than any mistake could cost you.
+
+2. There is no bad example. You have two good intros and no bad one, and you cannot say what a bad one would look like. Any areas I picked would be guesses, not things that have actually gone wrong for you. The guide warns against exactly that.
+
+What I would do instead is read the two lines before the newsletter goes out. If you want it a little firmer than that, keep one sentence in the prompt: "Two lines, friendly, no promises or dates I haven't given you." Then glance at the result. That is enough.
+
+A rubric would earn its place if you start using AI for output that can hurt you when it is wrong. Examples are replies to customers, anything that quotes prices or dates, a message to a client, or a document someone relies on. If you have a task like that, send me the same four answers for it. Include one real output that went wrong, or a description of what going wrong would look like, and I will build the rubric then.
+
+If the newsletter ever does produce something bad, such as a wrong date, an invented event or a tone that upset someone, keep that example. It tells you the intro has stakes after all, and it gives you something real to build the rubric from.

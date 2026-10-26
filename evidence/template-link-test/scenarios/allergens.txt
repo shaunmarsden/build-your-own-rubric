@@ -1,0 +1,7 @@
+My task: an AI tool drafts the allergen statement for each product label at our bakery, from the recipe sheets.
+
+Good examples: (1) A statement for a granola bar that listed oats, nuts and milk exactly as the recipe sheet showed. (2) A statement that said "Recipe sheet does not say whether the chocolate contains soya. Check the supplier sheet before printing."
+
+Bad example: the statement for a seeded loaf left out sesame, because the recipe sheet just said "seed mix". A customer with a sesame allergy had a reaction.
+
+What a missed failure costs: harm to a customer, a possible legal case, and a recall of the batch.

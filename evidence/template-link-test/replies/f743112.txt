@@ -1,0 +1,64 @@
+Your task has real stakes and you gave me a real bad example, so I can build the rubric. Here it is.
+
+## Rubric: AI priority ratings on IT helpdesk tickets
+
+**What it checks.** Each ticket gets a P1 to P4 rating and a one-line reason. You score both.
+
+**An assumption to check.** I don't know how your tool defines P1 to P4 or what response time each one promises. I've assumed P1 and P2 mean "someone acts within the hour or two" and P3 and P4 mean "queue." If that is wrong, area 1 needs a one-line fix.
+
+### The scoring areas
+
+Score each area from 1 to 5, using the scale below.
+
+1. **Priority fits the ticket.** A careful human on your desk would pick the same P-level, or one level off. Being one level too high costs a little. Being one level too low costs much more. Mark it down harder for too low.
+2. **Deadlines caught.** If the ticket gives a time ("pay run at noon", "client call at 2"), the rating reflects how little time is left. It does not reflect only how simple the fault is.
+3. **Reach and consequence.** The rating reflects how many people are hit and what stops if the fault stays. This includes anything tied to pay, customers, or a payment commitment. Your payroll case failed here.
+4. **Conditions survived.** Details that change the priority were read correctly. Examples are "only me" against "whole team", a workaround that exists, or a fault that began today against one that has run for weeks.
+5. **Facts kept apart from guesses.** The reason line uses only what the ticket says. If the tool assumes something, such as "probably affects one user", it says so. If the number affected or the deadline is missing, it names the gap or flags the ticket for a human to look at.
+6. **Tone did not steer the rating.** A calm, polite ticket is not rated lower because it sounds calm. A shouting ticket is not rated higher because it shouts. The rating follows the facts.
+
+### The scale
+
+| Score | Meaning |
+|---|---|
+| 1 | Unusable. Wrong, and a human following it would cause harm. |
+| 2 | Weak. A real miss that a reviewer would have to fix. |
+| 3 | Useful with review. Roughly right, but a human must check it first. |
+| 4 | Strong with minor fixes. Right call, with a small flaw in the reason or a borderline level. |
+| 5 | Ready to use. Right call, and the reason names the evidence. |
+
+Total out of 30. The total never overrides an automatic failure.
+
+### Automatic failures
+
+Any one of these fails the ticket, whatever the score:
+
+- The ticket mentions pay, payroll, or another stated payment or legal commitment, and it is rated P3 or P4.
+- The ticket gives a deadline within the next working day and is rated lower than P2.
+- The ticket says a whole team, site, or department is affected and it is rated lower than P2.
+- The reason line states something the ticket does not say. An example is "no deadline" or "single user" when the ticket never says so.
+- The reason line contradicts the rating it supports.
+
+Your payroll ticket (P3, with a noon deadline and about 40 staff affected) trips the first, second, and third of these. So the rubric catches the case that hurt you. That is the minimum test for it.
+
+### What to record for every scored ticket
+
+- The total score
+- Any automatic failure
+- The one correction a human made, including the P-level the human chose
+- What to change in the prompt or process before the next run
+
+### Things I left out on purpose
+
+- I did not add a "sensitive data stayed out" area. Your examples don't show it as a problem. If tickets carry pay details or personal data and the tool copies them into its reason line, add it.
+- I did not add "action prepared, not done." Your tool only assigns a rating, so it doesn't apply. If it ever starts paging on-call staff or closing tickets by itself, add that area.
+
+### Before you trust it
+
+Your inputs give me one bad case, and I built the failures around it. Before you rely on this for real tickets, do the following:
+
+1. Pull 10 to 15 real tickets. Include the ones that went wrong, a few that were rated correctly, and a few borderline ones.
+2. Have a careful human rate them blind. Then score the AI's ratings with this rubric.
+3. Check that the scores match the human's view. Look for an area that never scores low, and for any ticket where the rubric says "fine" but the human says "wrong." Those two gaps mean the rubric needs changing.
+
+If you send me the P1 to P4 definitions and a few more real tickets with the correct ratings, I'll tighten the areas and test them against the examples.

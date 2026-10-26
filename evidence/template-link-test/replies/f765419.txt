@@ -1,0 +1,62 @@
+Your task has real stakes and your bad example is specific, so here is a finished rubric. It is built around the payroll ticket. That ticket named a deadline and an affected group, and the tool still marked it P3. Most of the rubric is there to catch that kind of miss.
+
+```markdown
+# Helpdesk Ticket Priority Rubric
+
+Built from your own gathered inputs: the task (an AI tool gives each incoming IT helpdesk ticket a priority from P1 to P4), your good and bad examples, and what a missed failure would cost (late pay, complaints, a possible breach of payment commitments).
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Deadline and time pressure | Did the tool pick up any stated deadline ("pay run is at noon", "before the board meeting") and set the priority against the time left, not just the wording of the problem? | / 5 |
+| Business function affected | Did it weigh what the system is used for? Payroll, finance, payments and customer-facing systems rank above convenience tools, even if the ticket sounds calm. | / 5 |
+| Number of people affected | Did it use the number or group named in the ticket (one desk PC vs the whole finance team)? | / 5 |
+| Fit to our P1 to P4 definitions | Does the priority match what P1, P2, P3 and P4 mean here, as you would apply them? Check the nearest boundary too: if P2 vs P3 was close, was P2 chosen? | / 5 |
+| Reason line | Is the one-line reason short, true to the ticket, and does it name the fact that drove the priority (the deadline, the group, the function)? | / 5 |
+| Missing information | Where the ticket leaves out something that would change the priority (how many users, whether there is a deadline), did the tool say so and flag it for a human, not guess? | / 5 |
+| Tone and wording bias | Did it ignore how polite, panicked or casual the ticket sounds? A calm note about payroll is still payroll. A loud note about a slow mouse is still a slow mouse. | / 5 |
+| Invented facts | Did it add no deadline, headcount, urgency or authority that the ticket does not contain? | / 5 |
+| Action versus approval | If it suggests an action (page the on-call engineer, tell payroll), is that stated as a proposal for a human to approve, not as already done? | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Gives P3 or P4 to a ticket that states a deadline today, or within the same working day, on payroll, payments, or anything that others depend on for money going out
+- Gives P3 or P4 to a ticket that says a whole team, site or department is blocked
+- Ignores a deadline that is written in the ticket
+- Invents a deadline, headcount or urgency that is not in the ticket, and uses it to set the priority
+- States that an action has been taken (someone notified, an engineer paged) when it has not
+- Gives no priority, or gives more than one
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+## Notes on using this
+
+- Test it before you trust it. Take 10 to 20 past tickets where you already know the right priority and score the tool's output with this sheet. Include the payroll ticket. It must trigger an automatic failure. If it does not, the rubric is not strict enough yet.
+- A ticket that scores well on every area can still be a quiet P3 that should have been P2. Automatic failures catch the worst case. The "Fit to our P1 to P4 definitions" area catches the near misses.
+- Over-calling is a risk too. If the tool marks most tickets P1, the real P1s get lost. If you see that in the test, add an automatic failure for it, or add an area for "does the top priority stay rare".
+```
+
+Two things I would like from you to tighten this.
+
+1. Your P1 to P4 definitions in your own words, if you have them written down. The "fit" area depends on them, and I have not guessed what P2 and P3 mean in your team.
+2. One or two more bad examples, if you have them. One failure gives me one shape of mistake. A second, such as a ticket that was over-called, would show whether I need a second kind of automatic failure.
+
+This rubric is for a person to apply. It does not score the tickets for you, and it should be checked against real outputs as set out in the notes above before anyone relies on it.

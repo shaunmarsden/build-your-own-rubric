@@ -1,0 +1,60 @@
+Your task has real stakes and your bad example is specific, so here is the rubric. I built it from the payroll ticket: the ticket said what the deadline was and who would be hurt, and the tool still marked it P3. Most of the areas below check for that kind of miss.
+
+```markdown
+# Helpdesk Ticket Priority Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Business impact | Did the tool work out what stops working and for whom, not just what is broken? A payroll file that will not open stops pay. A slow mouse pointer stops nothing. | / 5 |
+| Deadlines | If the ticket names a time ("pay run is at noon"), did the priority account for how little time is left? | / 5 |
+| Number of people affected | Did it count the people hit, or say it could not tell? One desk PC and a whole team are different tickets. | / 5 |
+| Priority matches your definitions | Does the P1 to P4 given fit what you mean by each level? Check against your written definitions, not your feel for the ticket. | / 5 |
+| Tone and wording | Is the priority based on what is actually wrong, not on how loud or calm the message sounds? A polite message can describe an emergency. | / 5 |
+| Missing information | Where the ticket left out something that decides the priority (how many people, what deadline), did the tool say so, rather than guess? | / 5 |
+| Facts versus guesses | Does the reason separate what the ticket says from what the tool assumed? | / 5 |
+| Reason is short and checkable | Is there a one-line reason, and can you check it against the ticket text in a few seconds? | / 5 |
+| Rounding up when unsure | On a close call between two levels, did it pick the higher one and flag the ticket for a person to look at? | / 5 |
+| No invented claims or actions | Did it avoid saying the ticket is assigned, being fixed, or solved when it only proposed a priority? | / 5 |
+
+Keep this to ten areas or fewer.
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Gives P3 or P4 to a ticket that names a deadline and a cost to people or money, such as pay, a contract date, or a customer commitment. (This is what happened with the payroll ticket.)
+- Gives a low priority to a ticket affecting many people (set your own number, for example ten or more), without any reason given.
+- Gives a priority with no reason at all.
+- Makes up a fact that is not in the ticket, such as a deadline, a number of users or a cause, and uses it to set the priority.
+- Lowers a priority because the writer sounded calm or casual, when the ticket text describes a serious problem.
+- Says or implies that someone has been assigned or that work has started, when the tool only set a priority.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+```
+
+Before you trust this, three things:
+
+1. **Write down what P1 to P4 mean to you.** The "Priority matches your definitions" row only works if the definitions exist. For example, what time limit makes something P1, and how many people make a team-wide problem P1 or P2. If you have no written definitions yet, writing them is the first job.
+2. **Test it on real tickets.** Take ten or so past tickets, including the payroll one, and score the tool's answers yourself. The payroll ticket must come out as an automatic failure. If it does not, the rubric is too loose. Then have a second person score the same ten. If you two disagree a lot on a row, rewrite that row.
+3. **Cut a row if nobody scores it low.** After a month of use, drop any row that is always 5, and add a row for any failure the rubric did not catch.
+
+I treated the "round up when unsure" row as a score rather than an automatic failure, because rounding up too often has a cost as well: if everything is P1, the real P1s get lost. If you disagree, say so and I will change it.

@@ -1,0 +1,7 @@
+My task: an AI tool reads incoming IT helpdesk tickets and gives each one a priority from P1 (urgent) to P4 (low).
+
+Good examples: (1) "VPN down for the whole finance team" marked P1 with a one-line reason. (2) "Mouse pointer is slow on my desk PC" marked P4.
+
+Bad example: "Payroll file will not open, and pay run is at noon" was marked P3. It waited five hours and pay went out late to about 40 staff.
+
+What a missed failure costs: late pay for staff, complaints, and a possible breach of our payment commitments.

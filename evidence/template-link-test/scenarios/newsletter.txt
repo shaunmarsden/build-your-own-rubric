@@ -1,0 +1,7 @@
+My task: an AI tool writes a friendly two-line intro for our monthly office newsletter.
+
+Good examples: (1) "Here is what you need to know this month." (2) "Plenty going on in the office this month, so here is the short version."
+
+Bad example: I do not have one. Nothing has gone wrong. It is only a newsletter.
+
+What a missed failure costs: nothing much, as far as I can tell.

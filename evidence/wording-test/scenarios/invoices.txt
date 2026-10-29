@@ -1,0 +1,7 @@
+My task: an AI tool reads supplier invoices and enters the supplier, invoice number, total and due date into our accounts system, for someone in finance to approve.
+
+Good examples: (1) It entered "Invoice 7731, Calder Print, 2,480.00, due 14 November" exactly as printed, and flagged that the invoice showed no purchase order number. (2) It said "The total is unclear on page 2, the scan is cut off. Please check the original" instead of guessing.
+
+Bad example: an invoice for 14,180 was entered as 1,418. Nobody noticed, so we paid 1,418 and the supplier put our account on hold until we sent the difference.
+
+What a missed failure costs: a supplier hold on our account, a rushed second payment, and an awkward conversation with a supplier we depend on.

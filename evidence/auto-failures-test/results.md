@@ -36,9 +36,9 @@ A rough text search of the scored areas, which I did after unblinding and which 
 - **It is small.** Eighteen rubric replies on three scenarios I wrote, and I judged "grounded" myself. The judgement calls are listed in the scores file. The two largest were counting wrong supplier and made-up field values as grounded for the invoice scenario, and counting "gets a figure wrong" as ungrounded for the tenancy scenario. Changing them would move a few counts but not the 12 to 0 pattern, because with the rule no reply listed any failure beyond the bad example and its near variants.
 - **The replies came from subagents,** on one message with all the answers given up front.
 
-## What I will propose
+## What I changed
 
-A separate pull request that changes step 3 in `SKILL.md` to the rule's wording, on top of the pull request that puts the template inside the skill. I have prepared it as a draft, stacked on that one, and I will not merge either without your word.
+In a separate pull request ([#10](https://github.com/shaunmarsden/build-your-own-rubric/pull/10)), I changed step 3 in `SKILL.md` to the rule's wording.
 
 ## Files
 
@@ -46,4 +46,4 @@ A separate pull request that changes step 3 in `SKILL.md` to the rule's wording,
 - `replies/`: the 22 replies, named at random.
 - `scores-blind.md`, `scores.json`: my scores, written before unblinding.
 - `mapping.json`: which reply was which version and scenario.
-- `analyse.py`: unblinds and adds up the totals. Run it on a folder holding `scores.json` and the mapping file (named `MAPPING_DO_NOT_READ_UNTIL_SCORED.json` there).
+- `analyse.py`: unblinds and adds up the totals. From the repository root, run `python3 evidence/auto-failures-test/analyse.py evidence/auto-failures-test`.

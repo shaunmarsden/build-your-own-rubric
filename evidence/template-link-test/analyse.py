@@ -4,7 +4,8 @@ python3 evidence/template-link-test/analyse.py <folder with scores.json and the 
 import json, sys
 from pathlib import Path
 folder = Path(sys.argv[1])
-mapping = json.loads((folder / "MAPPING_DO_NOT_READ_UNTIL_SCORED.json").read_text())
+name = "mapping.json" if (folder / "mapping.json").exists() else "MAPPING_DO_NOT_READ_UNTIL_SCORED.json"
+mapping = json.loads((folder / name).read_text())
 scores = json.loads((folder / "scores.json").read_text())
 ARMS = ("current", "nolinks", "inline")
 rows = []

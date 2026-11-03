@@ -30,7 +30,7 @@ You don't need to install anything or write any code to try it once.
 
 ## Before You Use It
 
-A rubric built here is a first draft. Before you trust it with anything important, score a handful of real outputs with it. Check the scores match what a careful person would conclude. This repository records no logged run of the skill on a real task. The template sits inside the skill because a test on 26th October 2026 found that a pasted skill follows its layout when the template is inside it and does not when the template is only linked ([results](evidence/template-link-test/results.md)).
+A rubric built here is a first draft. Before you trust it with anything important, score a handful of real outputs with it. Check the scores match what a careful person would conclude. This repository records no logged run of the skill on a real task. The template sits inside the skill because a test on 26th October 2026 found that a pasted skill follows its layout when the template is inside it and does not when the template is only linked ([results](evidence/template-link-test/results.md)). The skill also tells the AI to take automatic failures only from your bad example. Without that rule, every rubric in a second test added at least one failure nobody had described. With it, none did ([results](evidence/auto-failures-test/results.md)).
 
 ## Feedback
 

@@ -33,9 +33,9 @@ Every one of the 18 rubric replies, in every version, listed at least one automa
 - **The replies came from subagents** with Claude Code's own context, on one message with all the answers up front. A real chat may ask the questions one at a time.
 - **Some of the inline replies copied the template's wording,** including its opening line, which is the intended effect.
 
-## What I will propose
+## What I changed
 
-A separate pull request that changes `SKILL.md`: add the contents of `templates/rubric-template.md` inside the skill under an "Output Format" heading, as in the inline version in `variants/`, and move the closing links to the worked examples, template and checklist out of the skill and into the README, where they already are. I have not made that change here, and I will not make it without your word. A note on size: the inline version is about 170 words longer (1,047 words against 879).
+In a separate pull request ([#8](https://github.com/shaunmarsden/build-your-own-rubric/pull/8)), I put the contents of `templates/rubric-template.md` inside `SKILL.md` under an "Output Format" heading, as in the inline version in `variants/`. I took the closing links to the worked examples, template and checklist out of the skill, since the README already has them. The inline version is about 170 words longer (1,047 words against 879).
 
 ## Files
 
@@ -43,4 +43,4 @@ A separate pull request that changes `SKILL.md`: add the contents of `templates/
 - `replies/`: the 24 replies, named at random.
 - `scores-blind.md`, `scores.json`: my scores, written before unblinding.
 - `mapping.json`: which reply was which version and scenario.
-- `analyse.py`: unblinds and adds up the totals. Run it on a folder holding `scores.json` and the mapping file (named `MAPPING_DO_NOT_READ_UNTIL_SCORED.json` there).
+- `analyse.py`: unblinds and adds up the totals. From the repository root, run `python3 evidence/template-link-test/analyse.py evidence/template-link-test`.

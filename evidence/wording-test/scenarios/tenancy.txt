@@ -1,0 +1,7 @@
+My task: an AI tool summarises tenancy agreements for a small landlord, so they can check the key terms before signing.
+
+Good examples: (1) A summary that quoted "rent 950 a month, due on the 1st, increases only with two months' written notice". (2) A summary that said "The agreement does not name a deposit scheme. Check this before signing."
+
+Bad example: a summary said "deposit is protected in an approved scheme" when the agreement named no scheme at all. The landlord did not protect the deposit within the legal time limit.
+
+What a missed failure costs: a legal penalty that can be several times the deposit, and a tenant who can claim the money back.

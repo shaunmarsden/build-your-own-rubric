@@ -1,0 +1,7 @@
+My task: an AI tool drafts first replies to job applicants, for a recruiter to review and send.
+
+Good examples: (1) A reply that thanked the applicant and said the team would be in touch within two weeks, which is our real timeline. (2) A reply that said "I do not have the interview dates yet and will confirm them."
+
+Bad example: a draft said "We would like to invite you to interview on Tuesday at 10am." No interview had been agreed, no slot was booked, and the hiring manager had not decided. The recruiter sent it, and the applicant turned down another offer to keep Tuesday free.
+
+What a missed failure costs: an applicant misled, a possible complaint about our hiring, and a poor name among candidates.

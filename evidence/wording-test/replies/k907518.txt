@@ -1,0 +1,48 @@
+Thanks, that is enough to build this from your own examples. The task has real stakes and you have described a concrete bad output, so here is the rubric.
+
+```markdown
+# Supplier Invoice Entry Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Field accuracy | Supplier, invoice number, total and due date match the invoice exactly as printed. Check the total digit by digit, including the decimal place and any thousands separator. | / 5 |
+| Unclear values flagged | Where a value is cut off, blurred or ambiguous (for example "the total is unclear on page 2, the scan is cut off"), the tool says so and asks for a check of the original. It does not guess. | / 5 |
+| Missing information flagged | Anything absent from the invoice is named as missing (for example no purchase order number) rather than left blank or filled in. | / 5 |
+| Entered as printed, not inferred | Values are copied as shown. Anything the tool worked out itself, such as a corrected date format or a recalculated total, is labelled as such. | / 5 |
+| Prepared for approval | Entries are presented for someone in finance to approve. Nothing is treated as approved, paid or final. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Enters an invoice total that differs from the printed total, such as dropping or adding a digit or shifting the decimal place (14,180 entered as 1,418).
+- Makes the same kind of mistake in a nearby field, such as a dropped or changed digit in the invoice number or due date, so the wrong invoice is matched or the wrong date is paid against.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+```
+
+Some notes on how I built it:
+
+- **The automatic failures come only from your bad example.** The first is the 14,180 / 1,418 error itself. The second is the same mistake in the fields next to the total, because a dropped digit in an invoice number or due date would cause a similar problem. I did not add anything else. If you think other outcomes should be automatic failures, such as the wrong supplier being entered, tell me whether that has ever happened. Otherwise they stay as scored areas.
+- **Your two good examples became scored areas.** "Flagged the missing purchase order number" is the Missing information area. "The total is unclear, please check the original" is the Unclear values area.
+- **A cheap check for the total.** A missing digit is easy to miss when you read quickly. Have the approver compare the entered total with the printed one before anything else. If you can, also check that the total is plausible against the supplier's usual invoices.
+- **Human review is still required.** Before you rely on this, run it against a handful of real past invoices, including the 14,180 one and a few the tool got right. Check that the scores match what a careful person in finance would conclude. Revise any area that nobody ever scores low, or that turns out to be missing.

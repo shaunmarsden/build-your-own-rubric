@@ -1,0 +1,51 @@
+Thanks, that is enough to build a grounded rubric. This task has real stakes, you gave a specific bad example, and you described what a miss costs, so none of the stop conditions apply.
+
+```markdown
+# Applicant First-Reply Drafts Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Confirmed facts only | Every date, time, timeline and next step in the draft is something the recruiter can point to as agreed or booked. The "within two weeks" timeline is fine because it is the real one. | / 5 |
+| Unknowns named as unknown | Where something is not yet known (interview dates, whether the applicant is progressing), the draft says so plainly, as in "I do not have the interview dates yet and will confirm them", and does not fill the gap. | / 5 |
+| No invented commitment or decision | The draft does not promise, imply or hint at an interview, an outcome or a decision that the hiring manager has not made. | / 5 |
+| Prepared for approval, not done | The draft reads as something a recruiter will check and send. It does not describe a step as already taken, booked or agreed when it is not. | / 5 |
+| Conditions and caveats kept | Where the real situation has conditions (for example "if we take your application forward"), they survive into the wording and are not smoothed away. | / 5 |
+| Tone and register | Warm, courteous and professional, suited to someone who has just applied. Neither cold nor overfamiliar. | / 5 |
+| Sensitive or irrelevant information left out | No internal notes, other candidates' details, or anything about the applicant that should not be in a first reply. | / 5 |
+| Clear next step for the applicant | The applicant can tell what happens next and roughly when, using only confirmed information. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Offers or invites the applicant to an interview, or any other next stage, when none has been agreed with the hiring manager
+- States a specific date, time or slot that has not been booked, as in "Tuesday at 10am"
+- Gives any other unconfirmed interview detail as settled, such as the place, the format, the interviewer or the panel, in the way the Tuesday draft treated the slot as settled
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+## Notes on Using This
+
+- The automatic failures all come from your Tuesday example and the same mistake in the fields next to it. I have not added others. If you think something else deserves to be an automatic failure (for example a draft that mentions salary or promises a decision date), tell me whether it has ever actually happened. If it has not, it sits better as a lowered score in "No invented commitment or decision".
+- Before you trust this for real use, test it on a handful of real drafts, including the Tuesday one, and check that the scores match what a careful recruiter would conclude. The Tuesday draft should come out as an automatic failure. Your two good examples should score 4 or 5.
+- Revise it once real use shows an area is missing, or one that nobody ever scores low.
+```

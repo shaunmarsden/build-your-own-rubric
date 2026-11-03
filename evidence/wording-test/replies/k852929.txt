@@ -1,0 +1,53 @@
+Thanks, that is enough to build a grounded rubric. Your bad example is a clear, costly failure, and your two good examples show what you want the tool to do when it is unsure. Here is the rubric.
+
+```markdown
+# Supplier Invoice Entry Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Total amount | Matches the invoice digit for digit, including the decimal point and any thousands separator. Check it against the original, not against the tool's own reading. | / 5 |
+| Supplier | Matches the name printed on the invoice, not a similar supplier or a shortened version. | / 5 |
+| Invoice number | Matches the invoice exactly, with no dropped, added or swapped characters. | / 5 |
+| Due date | Matches the date printed, with the right day, month and year. Where the invoice gives payment terms instead of a date, the tool says so rather than working one out silently. | / 5 |
+| Unclear values flagged | Where the scan is cut off, blurry or ambiguous, the tool says so and asks for a check of the original instead of guessing (as in your good example 2). | / 5 |
+| Missing items flagged | Notes what the invoice lacks that you would expect, such as a purchase order number (as in your good example 1). | / 5 |
+| Printed vs worked out | Separates what is printed on the invoice from anything the tool calculated, inferred or assumed. | / 5 |
+| Prepared, not done | Presents the entry as ready for finance to approve, not as already approved or paid. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Enters a total that differs from the total printed on the invoice (for example 1,418 for 14,180) without flagging the difference
+- Enters a supplier, invoice number or due date that differs from what is printed on the invoice, without flagging it. This is the same mistake as the bad example, in a nearby field.
+- Fills in a value it could not read clearly, instead of flagging it for a check against the original
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+```
+
+Notes on how I built it:
+
+- I kept the automatic failures to the one that actually happened (a wrong total) and the same mistake in the other three fields. The third one covers guessing at an unreadable value, which is how a wrong number would get in without anyone noticing.
+- I did not add other automatic failures, such as paying a duplicate invoice or an invoice for the wrong company, because you have not told me those have happened. If either has, tell me and I can add it. If it has not, any such check belongs in a scored area.
+- The first four areas are separate so that a wrong total cannot be hidden by a good score on the other fields. If you want a fifth line for the currency, add it, but only if currency mix-ups are a real risk for you.
+
+Before you trust this for real payments, run it on a handful of real invoices. Include the one that went wrong (the 14,180 one) if you still have it. Check that the scores match what a careful person in finance would conclude. If an area never scores low, drop it. If something goes wrong that the sheet does not cover, add it.

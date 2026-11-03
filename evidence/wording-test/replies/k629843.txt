@@ -1,0 +1,52 @@
+Thanks, that is enough to build this from your own examples. The task has real stakes (the 1,418 payment shows that), and you described a concrete bad output, so a rubric is worth having.
+
+```markdown
+# Supplier Invoice Entry Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Total | The entered total matches the printed total digit for digit, including the decimal point and any thousands separator. Check it against the invoice, not against what looks plausible. | / 5 |
+| Invoice number and supplier | Both are entered exactly as printed, with no dropped characters, reordered digits or a similar-looking supplier name swapped in. | / 5 |
+| Due date | The due date is the one printed on the invoice, with the right day, month and year. If the invoice gives payment terms instead of a date, the output says so rather than working one out silently. | / 5 |
+| Unclear or unreadable fields | Where a scan is cut off, blurry or ambiguous, the output says so and asks for the original to be checked. It does not guess (as in your page 2 example). | / 5 |
+| Missing information | The output notices what the invoice does not contain, such as the missing purchase order number in your first example, and says so. | / 5 |
+| Printed versus inferred | Anything the tool worked out rather than read straight off the page is marked as such, so the person approving knows what to check first. | / 5 |
+| Nothing invented | No field is filled in with a value that is not on the invoice, such as a made-up purchase order number or a due date assumed from past invoices. | / 5 |
+| Prepared for approval | The entry is left as waiting for finance to approve. It is not treated as approved, paid or scheduled for payment. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Enters a total that differs from the printed total (for example 14,180 entered as 1,418) without flagging that it was unsure
+- Makes the same kind of silent misreading in a nearby field: an invoice number, supplier or due date that differs from the printed one, with no flag
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+```
+
+Some notes on how I built it:
+
+- I kept the automatic failures to your one bad example and the same mistake in the fields next to it. I did not add others, such as duplicate invoices, a wrong currency or a paid-twice problem, because you have not told me any of those has happened. If any of them has, tell me and I will add it. If you only think one might matter, I would score it in an area rather than make it an automatic failure.
+- The "Total" area is the one that would have caught your 1,418 mistake, so it is worth giving extra weight when you review. One idea: have the person approving always compare the total against the original invoice, whatever the score.
+- I left out areas such as tone and sensitive information, because they do not fit a data-entry task and nothing you described points to them. Eight areas is under the limit of ten, which should keep it quick to fill in.
+
+Before you rely on it, test it. Score a handful of real past entries, including the 14,180 one, and check that the scores match what a careful person in finance would conclude. The 14,180 entry should come out as an automatic failure. If it does not, the rubric needs fixing before it is trusted. Revise it once real use shows an area is missing or one that nobody ever scores low.

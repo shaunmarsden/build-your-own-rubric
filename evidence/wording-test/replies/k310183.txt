@@ -1,0 +1,13 @@
+I'd stop here rather than build a rubric, and the reason is in your own answers.
+
+Your task is naming rounds of a weekly team quiz. You told me nothing has gone wrong and a missed failure costs nothing. This approach is meant for repeated AI output where a mistake has real consequences, such as code review comments, legal drafting or hiring screens. Without stakes, a rubric is overhead. You'd spend more time filling it in than you'd ever save, and it would soon be abandoned.
+
+The second problem is that you have no bad example. A rubric built without one is guesswork about what might go wrong. Any "automatic failures" I listed would be things I made up, not things you've seen happen.
+
+What I'd suggest instead:
+
+- Keep doing what you're doing. Your two good examples, "Name That Tune, Nearly" and "Capital Ideas", already show your taste: a light pun and a short, punchy phrase that hints at the round's theme. Paste them into your prompt and say "names in this style".
+- If you want a quick check, ask yourself two things about each name. Does it hint at the round's theme? Would the team groan or smile at it?
+- Come back if something goes wrong. Say the AI suggests a name that accidentally mocks a colleague, or a joke that lands badly in a mixed team. That would be a real bad example, with a real cost, and I could build you a proper rubric from it.
+
+If you're also using AI for something where a slip would matter, tell me about that task and we can start there.

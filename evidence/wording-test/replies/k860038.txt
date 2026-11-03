@@ -1,0 +1,47 @@
+# First-Reply Drafts to Job Applicants Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Facts match what is confirmed | Every date, time, timeline and next step in the draft matches something the team has actually agreed. The "two weeks" line is fine because it is your real timeline. | / 5 |
+| Unknowns are said to be unknown | Where the draft does not have a detail, it says so, as in your good example: "I do not have the interview dates yet and will confirm them." It does not fill the gap with a guess. | / 5 |
+| No invented decisions or commitments | The draft does not promise an interview, an offer, a shortlist place or a reply date that nobody has decided. Check that the hiring manager has actually made any decision the draft mentions. | / 5 |
+| Prepared for approval, not done | The draft reads as something the recruiter will check and send, and does not treat an action as already taken (a slot booked, an invitation issued). | / 5 |
+| Tone fits an applicant | Polite, clear and warm without pressure or false urgency. It sounds like your team, not a form letter. | / 5 |
+| Sensitive or irrelevant information stayed out | No details about other candidates, internal views of this applicant, or anything the applicant has no need to see. | / 5 |
+| Clear next step for the applicant | The applicant can tell what happens next and roughly when, using only confirmed information. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Invites the applicant to an interview, or names an interview date, time or slot, when no interview has been agreed, no slot is booked and the hiring manager has not decided (the Tuesday 10am draft).
+- Makes the same kind of mistake in a nearby field: states an unconfirmed detail as settled, such as an offer, a salary, a start date, a location or a hiring decision.
+
+I have not added any other automatic failures, because you have not described them. If you think something else deserves to be one, such as discriminatory wording or leaking another candidate's details, it is scored under "Sensitive or irrelevant information stayed out" for now. Has anything like that ever actually happened? If so, tell me and we can move it here.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+---
+
+Before you rely on this, test it. Score five to ten real drafts, including some the recruiter has already corrected, and check that the scores match what a careful person would say. In particular, check that the Tuesday 10am draft fails. A rubric that has not been tested against real outputs is still a guess. Revise it once real use shows an area is missing, or that nobody ever scores one low.
+
+One suggestion on the process, separate from the rubric: the bad draft got through because the recruiter sent it. Ask the recruiter to check every date, time and promise in a draft against the booking system or the hiring manager before sending.

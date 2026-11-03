@@ -1,0 +1,49 @@
+# Applicant First-Reply Draft Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Factual accuracy | Every date, time, timeline and detail matches what the recruiter or hiring manager has actually confirmed (for example "in touch within two weeks" matches our real timeline) | / 5 |
+| Confirmed versus not yet decided | The draft keeps what is settled apart from what is not. Anything not yet agreed is worded as pending, not as fact | / 5 |
+| Missing information | Where something is not known yet (such as interview dates), the draft says so plainly and says it will be confirmed, like "I do not have the interview dates yet and will confirm them" | / 5 |
+| No invented commitments | The draft does not promise or imply an interview, a slot, an outcome, or a decision that nobody has made | / 5 |
+| Prepared for approval | The draft reads as something a recruiter reviews and sends, and does not treat any step (booking, invitation, decision) as already done | / 5 |
+| Tone and register | Polite, warm and professional, and fitting for an applicant who may be anxious about the outcome | / 5 |
+| Sensitive or irrelevant information | Nothing internal, such as the hiring manager's views, other candidates, or notes about the applicant, appears in the reply | / 5 |
+| Reply to the applicant's message | The draft answers what the applicant actually wrote or asked and is clear about what happens next | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- States or implies an interview date, time or slot that has not been agreed and booked (as in the "Tuesday at 10am" draft)
+- States or implies any other arrangement that nobody has confirmed, in the same way as that example, such as an interview location or format, an interview invitation, or a hiring decision
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+---
+
+Notes on how I built this:
+
+- Both automatic failures come from your bad example. The first is that exact mistake. The second is the same mistake in a nearby field, where the draft treats something unconfirmed as settled. I did not add any other automatic failures, because you have not described any other incident. If you think another outcome should fail a draft automatically, tell me whether it has ever happened. Otherwise I would put it in a scored area above.
+- Your two good examples map onto "Factual accuracy" (the real two-week timeline) and "Missing information" (saying the dates are not yet known).
+- Eight areas is plenty. Fewer areas that get filled in beat more that get skipped.
+- Before you rely on this, test it. Score a handful of real past drafts, including the bad one, and check that the scores match what a careful recruiter would conclude. The "Tuesday at 10am" draft should hit an automatic failure. If any area never scores below 4, or one is missing, revise it.

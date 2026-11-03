@@ -1,0 +1,14 @@
+I'm not going to build a rubric for this one, and the reason is in your own answers.
+
+The skill I'm working from says to stop when a task has no real stakes if it goes wrong, because a rubric would be unnecessary overhead. You told me that nothing has gone wrong with the quiz round names and that a miss costs nothing as far as you can tell. You also have no bad example. A rubric built from nothing would be guesses about what might go wrong, not something grounded in a real failure. That would just be a checklist to fill in every week for no benefit.
+
+For a task like this, your own judgment is the right check. If a name makes you smile and fits the round, use it. If it doesn't, ask the tool for another.
+
+If you'd still like a bit of consistency, here is a free alternative that isn't a rubric. Add one line to your prompt, such as: "Suggest five names for this round, each a pun or play on the topic, under six words, with no in-jokes that only some of the team would get." Then pick the one you like best.
+
+I'd revisit a rubric if one of these happens:
+- A suggested name lands badly with the team, for example it's offensive, it gives away an answer, or it excludes someone.
+- The names are going somewhere public, such as a customer event or a company newsletter.
+- Other people start using the tool for this and you want them to get the same standard.
+
+If any of those comes up, send me what happened and I'll build a rubric from that example.

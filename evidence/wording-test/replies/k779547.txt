@@ -1,0 +1,50 @@
+# Tenancy Agreement Summary Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Accuracy of key terms | Rent amount, due date, term length, notice periods and other key terms match the agreement exactly. Quote the clause where you can, as in "rent 950 a month, due on the 1st". | / 5 |
+| Conditions and caveats kept | Conditions attached to a term survived, such as "increases only with two months' written notice". Nothing was shortened so far that the condition was lost. | / 5 |
+| Deposit handling | The summary says what the agreement actually says about the deposit: the amount, and whether a scheme is named. It does not fill gaps with what is usual. | / 5 |
+| Missing information flagged | Anything the agreement leaves out is named as missing, with a prompt to check it before signing, as in "The agreement does not name a deposit scheme. Check this before signing." | / 5 |
+| Stated versus assumed | What the agreement says is kept apart from what the tool infers or assumes. Inferences are labelled as inferences. | / 5 |
+| Sources traceable | Each key term can be found in the agreement, by clause or quote, so the landlord can check it in seconds. | / 5 |
+| Plain language for a small landlord | Written so a non-lawyer can check the terms before signing. Legal terms are explained or left in the agreement's own words. | / 5 |
+| No invented advice or commitments | The summary does not tell the landlord a term is lawful or safe to sign, and does not state legal obligations as settled. The landlord decides, after checking. | / 5 |
+
+Keep this to ten areas or fewer.
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- States that the deposit is protected, or names or implies a deposit scheme, when the agreement names none
+- States any other key term as present when the agreement does not contain it, for example a rent amount, due date or notice period that the agreement does not give
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+---
+
+Notes on how I built this:
+
+- I kept the automatic failures to the two your bad example supports. The first is the exact mistake. The second is the same mistake in a nearby field. I did not add others, such as the summary missing a term altogether, because you have not described that happening. That belongs in the scored areas, and it is covered by "Missing information flagged". If you have seen another outcome that cost you real money, tell me and I will consider it.
+- Your two good examples map to the "Conditions and caveats kept" and "Missing information flagged" areas.
+- The rubric is untested. Before you rely on it, run it on a handful of real summaries, including ones you already know are good or bad. Check that the scores match what a careful person would conclude. Revise it if an area is never scored low or something is missing.

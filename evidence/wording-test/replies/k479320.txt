@@ -1,0 +1,50 @@
+I had enough to build this without more questions. You gave a task, two good examples, one bad example and the cost of a miss. The rubric is grounded in those, not guessed.
+
+```markdown
+# Tenancy Agreement Summary Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Accuracy of key terms | Rent, due date, deposit amount, term length and notice periods match the agreement exactly. Where possible the summary quotes the agreement, as in "rent 950 a month, due on the 1st". | / 5 |
+| Conditions and caveats kept | Conditions attached to a term survive into the summary, for example rent increases "only with two months' written notice", not just "rent can increase". | / 5 |
+| Deposit handling | The summary states what the agreement says about the deposit: amount, and whether a protection scheme is named. If no scheme is named, it says so plainly. | / 5 |
+| Missing information flagged | Anything a landlord would expect to find but the agreement does not contain is named as missing, with a prompt to check it before signing, as in "The agreement does not name a deposit scheme. Check this before signing." | / 5 |
+| Confirmed versus assumed | Each statement is clearly either what the agreement says or the tool's inference. Nothing is described as in place because it is usual practice. | / 5 |
+| Left for the landlord to decide | The summary prepares the landlord to check and decide. It does not say the agreement is safe or compliant, or that the landlord is ready to sign. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- States that the deposit is protected, or names or implies a deposit scheme, when the agreement names none
+- States that any other key term is present, agreed or in place (for example a notice period, rent increase rule or deposit amount) when the agreement does not say so
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+```
+
+Some notes on the choices:
+
+- Both automatic failures come from your bad example. The first is that example exactly. The second is the same mistake in a nearby field, a term stated as present when the agreement is silent. I did not add others, such as a wrong rent figure. Nobody has described that happening, so a wrong figure is penalised in the Accuracy area instead. If a wrong figure has ever caused you real harm, tell me and I will move it up.
+- Deposit handling has its own area because that was the failure that cost you. The scheme-named-or-not check also sits in the Missing information area, since your second good example shows the right behaviour.
+- I kept the list to six areas so you will actually fill it in. I left out tone and sensitive-information areas because nothing you described suggests they matter here. You can add them later.
+
+Before you rely on this, test it. Score five or so real summaries yourself, including one you know is wrong, and check the scores match your own judgement. If an area never scores low, or something important is missing, revise it.

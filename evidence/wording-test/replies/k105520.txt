@@ -1,0 +1,52 @@
+Thanks, that is enough to build a grounded rubric. The task has real stakes, and your bad example is specific. Here it is.
+
+```markdown
+# Tenancy Agreement Summary Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Accuracy of key terms | Rent, due date, term length, deposit amount and notice periods match the agreement exactly. Good example: "rent 950 a month, due on the 1st". | / 5 |
+| Deposit and scheme | The summary says only what the agreement says about the deposit. If a scheme is named, it is named. If none is named, the summary says so and tells the landlord to check before signing. | / 5 |
+| Conditions and caveats | Conditions survived. Good example: rent "increases only with two months' written notice", not just "rent can increase". | / 5 |
+| Confirmed vs assumed | Anything the agreement states is kept apart from anything the tool is inferring or assuming. | / 5 |
+| Missing information | Terms the agreement leaves out are listed as missing, not filled in with a typical default. | / 5 |
+| Fit for the reader | Plain language that a small landlord with no legal training can check against the document. | / 5 |
+| Relevance and sensitivity | Only the key terms the landlord needs. Personal details of the tenant or others are not repeated without need. | / 5 |
+| No invented authority | The summary does not say the agreement is "safe to sign", "compliant" or "legally fine", and does not promise anything the document does not. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- States that the deposit is protected, or protected in an approved scheme, when the agreement names no scheme
+- States any other deposit-related fact (the amount, when it must be protected, how it is returned) that the agreement does not contain or that contradicts it
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+```
+
+Notes on how I built it:
+
+- I kept the automatic failures to what your bad example showed and the same mistake in a nearby field (other deposit facts). I did not add others, such as missing a break clause. If you think another outcome should fail automatically, tell me whether it has ever happened. Otherwise it is better as a scored area.
+- "Says it is safe to sign" sits in a scored area, not as an automatic failure, for that reason.
+- Before you trust this for anything with real stakes, run it on a handful of real summaries, including ones where you already know the right answer, and check that the scores match what a careful person would conclude. In particular, check that a summary with the exact bad-example mistake gets caught.
+- Revise it after real use. If nobody ever scores an area low, or you keep finding a problem it does not cover, change it.
+- This is a check on the summary, not legal advice. For anything about the legal time limit or penalties, the landlord should confirm with a qualified person.

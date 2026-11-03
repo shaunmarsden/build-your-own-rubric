@@ -1,0 +1,12 @@
+I haven't built a rubric, and I think that's the right call here.
+
+By your own account, nothing has gone wrong and a bad quiz-round name costs you nothing. A rubric earns its place when a missed failure has real consequences, like a wrong legal clause, a bad support reply or a hiring screen that skews. Here it would be overhead: a scoring sheet you'd have to fill in every week to judge something you can judge in two seconds by reading it.
+
+Your good examples already show what you like. "Name That Tune, Nearly" and "Capital Ideas" are short, a bit punny and tied to the round's content. If you want the AI to hit that standard more often, put those two examples in your prompt and add a line such as "short, a light pun, hints at the round's topic without giving away answers". That will do more for you than a rubric would.
+
+Two things would change my answer:
+
+1. A name goes wrong in a way that matters. For example, one gives away an answer, or it lands badly with someone on the team. Tell me what happened and we can build a short rubric from that real case, with that failure as an automatic fail.
+2. You start using the AI for something with higher stakes, such as client-facing material or anything that goes out under your name.
+
+If either happens, send me the details and we'll build it then.

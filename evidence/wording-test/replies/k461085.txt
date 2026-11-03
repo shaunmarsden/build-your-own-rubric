@@ -1,0 +1,50 @@
+Here is a rubric built from your answers. It is based on your two good examples and your one bad example, so it is only as good as those.
+
+# Applicant First-Reply Drafts Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Facts match what is real | Every date, timeline and process step in the draft matches what the team has actually decided. "In touch within two weeks" is fine because it is your real timeline. | / 5 |
+| Confirmed versus not yet decided | The draft keeps what is settled apart from what is not. Anything not yet decided is said to be pending, as in "I do not have the interview dates yet and will confirm them." | / 5 |
+| Missing information named | Where the draft cannot give something (dates, next steps, a decision), it says so and says what will follow. It does not skip over the gap or fill it with a guess. | / 5 |
+| Action left for approval | The draft prepares a step for the recruiter to approve. It does not write as though an invitation, booking or decision has already happened. | / 5 |
+| No invented authority or commitment | The draft promises nothing that nobody with authority has agreed, and does not speak for the hiring manager beyond what they have actually decided. | / 5 |
+| Tone fits the applicant | Polite, clear and warm enough for a first reply. No pressure, and no hint of a result before there is one. | / 5 |
+| Sensitive or irrelevant detail kept out | No internal notes, other candidates, or details about the applicant that the reply does not need. | / 5 |
+| Ready for the recruiter to send | Little editing needed beyond checking facts. Clear, correct and the right length. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Invites the applicant to interview, or states or implies an interview is arranged, when none has been agreed, in particular by naming a day or time that nobody has booked (your Tuesday 10am example)
+- Makes the same mistake in a nearby field: states as settled something that has not been decided, such as an interview location, format or interviewer, a start date, a salary, an offer, or that the applicant is shortlisted or through to the next stage
+
+I have kept this list to what your example showed and the same mistake in the fields next to it. I did not add anything else. If other outcomes worry you, such as a reply that rejects someone by mistake, or one that discloses another applicant's details, tell me whether either has ever happened. If so I can add it as an automatic failure. Otherwise it stays in the scored areas above (the sensitive-detail area covers the second one).
+
+## What to Record
+
+- Total score (out of 40)
+- Any automatic failure
+- The single most important correction the recruiter made
+- What would need to change in the prompt or process before the next attempt
+
+## Before you rely on it
+
+This is a tool for a person to apply, not something that scores itself. Before you trust it, test it on a handful of real drafts, including some you already know were fine and the Tuesday 10am one. Check that the scores match what a careful recruiter would conclude. Your bad example should trip the first automatic failure. If it does not, the wording needs fixing. Revise the rubric once real use shows an area is missing or one that nobody ever scores low.
+
+A practical note on the prompt side: the draft that caused the problem invented a slot. A line in the drafting prompt such as "never propose an interview date or time unless one is supplied to you" would help prevent it. The rubric catches the failure but does not prevent it.

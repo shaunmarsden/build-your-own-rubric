@@ -1,0 +1,55 @@
+Thanks, that is enough to build this from. The task has real stakes (a penalty of several times the deposit), and you gave a specific bad example, so I can ground the rubric in it rather than guess.
+
+```markdown
+# Tenancy Agreement Summary Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Accuracy of key terms | Rent amount, due date, term length, deposit amount and notice periods match the agreement exactly. Check each against the text. | / 5 |
+| Conditions and caveats kept | Conditions survived, for example rent increases only "with two months' written notice", not just "rent can increase". | / 5 |
+| Stated versus absent | Anything the agreement does not say is reported as "not stated", never filled in with a standard or assumed term. A missing deposit scheme counts here. | / 5 |
+| Missing information flagged | The summary lists what the agreement leaves out and tells the landlord to check it before signing, for example "The agreement does not name a deposit scheme. Check this before signing." | / 5 |
+| Deposit handling | What the agreement says about the deposit (amount, where it is held, any scheme named) is reported exactly, and any gap is called out. This is the area where the known failure happened, so score it separately. | / 5 |
+| Confirmed facts separated from reading | The summary distinguishes what the text says from the tool's interpretation or general knowledge about tenancy law. | / 5 |
+| Plain wording for a non-lawyer | A small landlord can follow it without the original open, and key terms are quoted where wording matters. | / 5 |
+| No invented authority or reassurance | The summary does not say the agreement is "compliant", "standard" or "safe to sign", and does not imply a legal check it has not done. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- States that the deposit is protected, or names or implies a deposit scheme, when the agreement names none (the failure in your bad example)
+- States any other key term as present when the agreement does not contain it, for example a deposit amount, a rent figure, a notice period or a protection deadline (the same mistake in a nearby field)
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+```
+
+Some notes on how I built it:
+
+- I kept the automatic failures to the two that follow from your bad example. I did not add others such as "misses a break clause" or "gets the rent wrong", because you have not described those happening. Wrong rent and similar errors are covered in the Accuracy area, where they lower the score instead of failing the output outright. If any other outcome has actually happened to you, tell me what it was and I will consider adding it.
+- The deposit area overlaps with "Stated versus absent" on purpose. It is the one place a miss has cost you money, so it gets its own line. If you find you are scoring the two the same way every time, merge them.
+- Eight areas is under the ten-area limit. A rubric that gets filled in is worth more than a longer one that does not.
+
+Before you rely on it, test it. Score five or so real summaries you have already checked by hand, including your bad one, and see whether the scores match what you concluded. The bad one should land as an automatic failure. If it does not, the rubric needs work. Revise it once real use shows an area is missing or one that nobody ever scores low.
+
+This rubric helps you judge summaries. It does not replace reading the agreement itself, and for anything with legal consequences such as deposit protection, a solicitor or your local landlord association is the place to confirm the rules.

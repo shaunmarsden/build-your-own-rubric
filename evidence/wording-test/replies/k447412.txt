@@ -1,0 +1,55 @@
+Thanks, that is enough to build a grounded rubric. Your bad example is specific and the cost is clear, so there is no reason to stop here. Here is the finished rubric.
+
+```markdown
+# Tenancy Agreement Summary Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Accuracy of key terms | Rent, due date, term length, notice periods and other figures match the agreement exactly. Where the agreement words them a particular way (for example "increases only with two months' written notice"), the summary keeps that wording or something equivalent. | / 5 |
+| Deposit and scheme details | Deposit amount, and the deposit scheme, are stated only as the agreement states them. If the agreement names no scheme, the summary says so plainly and tells the landlord to check before signing. | / 5 |
+| Conditions and caveats kept | "Only if", "unless" and "after" conditions on rent increases, notice, repairs and ending the tenancy survive into the summary and are not flattened into simple statements. | / 5 |
+| Facts versus assumptions | Anything the agreement states is presented as fact. Anything inferred, usual practice or the summary's own guess is labelled as such. | / 5 |
+| Missing information flagged | The summary names terms a landlord would expect to find but that the agreement leaves out or leaves vague, instead of filling the gap. | / 5 |
+| Fit for the reader | Plain language for a small landlord who is not a lawyer. Short, easy to check against the agreement line by line. | / 5 |
+| Relevance and sensitivity | No personal details or side material beyond what the landlord needs to check the key terms before signing. | / 5 |
+| No invented authority or commitment | The summary does not say the agreement is legal, safe or compliant, does not promise outcomes, and does not treat signing or any legal step as done or approved. It prepares the landlord to decide. | / 5 |
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- States that the deposit is protected, or protected in an approved scheme, when the agreement names no scheme or says nothing about protection
+- Gives a deposit scheme name, protection deadline or protection step as if the agreement stated it, when the agreement does not contain it
+
+## What to Record
+
+- Total score (out of 40)
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+```
+
+A few notes on how I built it.
+
+- The two automatic failures both come from your bad example. The first is the exact mistake. The second is the same mistake in a nearby field (a scheme name or protection deadline presented as stated when it is not in the agreement). I did not add others, because nobody has described them. If something else has ever gone wrong with a summary, tell me what happened and it can go in as an automatic failure. If you only think it might matter, it belongs in a scored area.
+- Your two good examples became the checks in "Accuracy of key terms" and "Deposit and scheme details". The second one (saying the agreement does not name a scheme and to check before signing) is the behaviour that area is looking for.
+- I kept it to eight areas, well under the limit of ten, so it stays quick to fill in. The "invented authority" area is also where a summary that tells the landlord "this is all fine to sign" would lose points.
+- I dropped the "sensitive information" and "action prepared for approval" areas into "Relevance and sensitivity" and "No invented authority or commitment" so the sheet stays short.
+
+Before you trust it, test it. Take five or so real summaries, including one you know is bad (the deposit one is ideal), score them yourself, and check the rubric gives results a careful person would agree with. A rubric that is not tested like this is a guess. Revise it if an area never scores low or something important is missing.
+
+One caution: the rubric helps you catch errors in a summary, but it is not legal advice. Because a missed deposit protection failure can cost several times the deposit, keep checking the deposit terms against the agreement itself before signing, whatever score a summary gets.

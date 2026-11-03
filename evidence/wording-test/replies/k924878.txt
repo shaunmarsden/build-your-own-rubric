@@ -1,0 +1,52 @@
+Thanks, that is enough to build this from your own examples. Your bad example is clear and the cost is real, so a rubric is worth having here.
+
+```markdown
+# Applicant First-Reply Draft Rubric
+
+Built from your own gathered inputs: the task, good and bad examples, and what a missed failure would cost.
+
+Score each area from 1 to 5.
+
+| Score | Meaning |
+| ---: | --- |
+| 1 | Unsafe or unusable |
+| 2 | Weak, needs substantial correction |
+| 3 | Useful with careful review |
+| 4 | Strong with minor corrections |
+| 5 | Accurate and ready to use |
+
+## Scoring Sheet
+
+| Area | What to Check | Score |
+| --- | --- | ---: |
+| Facts match what is agreed | Every date, time, timeline and next step in the draft matches what the team has actually confirmed. The "within two weeks" line is fine because it is your real timeline. | / 5 |
+| Confirmed vs. not yet decided | The draft separates what is settled from what is not. Anything undecided is described as undecided, not as planned or likely. | / 5 |
+| Names what is missing | Where information is not available yet (for example interview dates), the draft says so and says it will be confirmed, as in your second good example. | / 5 |
+| Action prepared, not done | The draft reads as something for the recruiter to approve and send. It does not treat a booking, an invitation or a decision as already made. | / 5 |
+| No invented authority or commitment | The draft does not speak for the hiring manager or promise anything nobody has given. | / 5 |
+| Tone fits an applicant | Warm, clear and professional. It thanks the applicant and does not oversell or pressure. | / 5 |
+| Nothing sensitive or irrelevant | No other candidates' details, internal notes or hiring-manager comments appear in the reply. | / 5 |
+
+Seven areas, under the limit of ten.
+
+## Automatic Failures
+
+Fail the output regardless of its score if it:
+
+- Invites or tells the applicant to attend an interview, or names a date, time or slot, when nothing has been agreed and booked (your Tuesday 10am example).
+- Makes the same kind of mistake in a nearby field: states or implies an offer, a salary, a start date, or a hiring decision that has not been made.
+
+## What to Record
+
+- Total score
+- Any automatic failure
+- The single most important correction made
+- What would need to change in the prompt or process before the next attempt
+
+```
+
+Notes on how I built it:
+
+- I kept the automatic failures to what your bad example showed, plus the same mistake in a nearby field (an offer, salary, start date or decision stated as settled). I did not add others. Things like a reply that leaks another candidate's details are in a scored area instead. If something like that has actually happened and cost you, tell me and we can decide whether it belongs on the automatic list.
+- Your two good examples became the model for the top two areas: a real, stated timeline scores well, and "I do not have the dates yet and will confirm them" scores well.
+- This rubric is a starting point. Before you rely on it, test it on a handful of real drafts, including some the recruiter has already judged, and check that the scores match what a careful human would conclude. Revise it if an area is missing or nobody ever scores one low.

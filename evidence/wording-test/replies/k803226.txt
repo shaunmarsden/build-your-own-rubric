@@ -1,0 +1,11 @@
+I'm not going to build a rubric for this one, and the reason is in your own answers.
+
+A rubric earns its keep when a missed failure has a real cost and you can describe what a bad output looks like. You've told me that nothing has gone wrong and that a miss costs nothing. Names like "Name That Tune, Nearly" and "Capital Ideas" are the kind of output where you can see at a glance whether you like it. A fixed checklist would add paperwork without catching anything, and without a real bad example I'd only be guessing at failure modes.
+
+What I'd suggest instead:
+
+- Keep picking names by gut feel. Pick the ones that make you smile and skip the rest.
+- If you want better suggestions, tell the tool what you like. Paste in your two good names and ask for ten more in that style, with a note on the round's topic.
+- Come back if something does go wrong. Say a name lands badly with a colleague, repeats an old one, or touches a sensitive subject. That's the real bad example, and with it I can build a short rubric around what actually happened.
+
+If you have a different task in mind where a wrong output would cost you something, such as customer replies, hiring screens or anything client-facing, tell me about it and I'll start from there.

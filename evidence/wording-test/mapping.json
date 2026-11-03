@@ -1,0 +1,90 @@
+{
+ "k852929": {
+  "arm": "current",
+  "scenario": "invoices"
+ },
+ "k660074": {
+  "arm": "current",
+  "scenario": "invoices"
+ },
+ "k629843": {
+  "arm": "current",
+  "scenario": "invoices"
+ },
+ "k461085": {
+  "arm": "current",
+  "scenario": "applicants"
+ },
+ "k924878": {
+  "arm": "current",
+  "scenario": "applicants"
+ },
+ "k872328": {
+  "arm": "current",
+  "scenario": "applicants"
+ },
+ "k288635": {
+  "arm": "current",
+  "scenario": "tenancy"
+ },
+ "k485181": {
+  "arm": "current",
+  "scenario": "tenancy"
+ },
+ "k479320": {
+  "arm": "current",
+  "scenario": "tenancy"
+ },
+ "k248578": {
+  "arm": "current",
+  "scenario": "quiz"
+ },
+ "k310183": {
+  "arm": "current",
+  "scenario": "quiz"
+ },
+ "k907518": {
+  "arm": "edited",
+  "scenario": "invoices"
+ },
+ "k318820": {
+  "arm": "edited",
+  "scenario": "invoices"
+ },
+ "k275559": {
+  "arm": "edited",
+  "scenario": "invoices"
+ },
+ "k486973": {
+  "arm": "edited",
+  "scenario": "applicants"
+ },
+ "k860038": {
+  "arm": "edited",
+  "scenario": "applicants"
+ },
+ "k140454": {
+  "arm": "edited",
+  "scenario": "applicants"
+ },
+ "k447412": {
+  "arm": "edited",
+  "scenario": "tenancy"
+ },
+ "k779547": {
+  "arm": "edited",
+  "scenario": "tenancy"
+ },
+ "k105520": {
+  "arm": "edited",
+  "scenario": "tenancy"
+ },
+ "k874831": {
+  "arm": "edited",
+  "scenario": "quiz"
+ },
+ "k803226": {
+  "arm": "edited",
+  "scenario": "quiz"
+ }
+}

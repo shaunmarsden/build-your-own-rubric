@@ -1,5 +1,7 @@
 # Build Your Own AI Output Rubric
 
+> **This tool has moved.** It now lives in [sibling-projects](https://github.com/shaunmarsden/sibling-projects/tree/main/tools/build-your-own-rubric) with the rest of the family, and that is where it gets updated. This repo is archived and kept for its history.
+
 <p>
   <img alt="Status: Working tool" src="https://img.shields.io/badge/status-working%20tool-2563eb">
   <a href="LICENSE"><img alt="Licence: MIT" src="https://img.shields.io/badge/licence-MIT-lightgrey"></a>
